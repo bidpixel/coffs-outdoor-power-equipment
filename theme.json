@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"color": {
+			"custom": true,
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": [
+				{ "slug": "orange", "color": "#E07B2A", "name": "Orange" },
+				{ "slug": "black", "color": "#1A1A1A", "name": "Black" },
+				{ "slug": "charcoal", "color": "#3D3D3D", "name": "Charcoal" },
+				{ "slug": "silver", "color": "#B0B0B0", "name": "Silver" },
+				{ "slug": "off-white", "color": "#F5F0E8", "name": "Off White" },
+				{ "slug": "white", "color": "#FFFFFF", "name": "White" }
+			]
+		},
+		"typography": {
+			"customFontSize": true,
+			"fontFamilies": [
+				{
+					"fontFamily": "'Barlow Condensed', sans-serif",
+					"name": "Barlow Condensed",
+					"slug": "barlow-condensed"
+				},
+				{
+					"fontFamily": "'Barlow', sans-serif",
+					"name": "Barlow",
+					"slug": "barlow"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "1200px",
+			"wideSize": "1440px"
+		},
+		"spacing": {
+			"customSpacingSize": true
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#1A1A1A",
+			"text": "#FFFFFF"
+		},
+		"typography": {
+			"fontFamily": "'Barlow', sans-serif",
+			"fontSize": "18px",
+			"lineHeight": "1.6"
+		}
+	}
+}
