@@ -310,7 +310,7 @@ $category_image_files = [
 	'battery-electric'   => [ 'battery-electric-outdoor-power-equipment-coffs-coast.jpg', 'battery-powered-outdoor-equipment-2.jpg', 'battery-electric-equipment-1.jpg' ],
 ];
 $section_images = array_map(
-	fn( $f ) => $theme_img . '/products/' . $f,
+	function( $f ) use ( $theme_img ) { return $theme_img . '/products/' . $f; },
 	$category_image_files[ $slug ] ?? []
 );
 
