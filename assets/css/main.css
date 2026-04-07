@@ -461,11 +461,13 @@ body.home .site-header.is-scrolled {
 
 /* Body offset for fixed header */
 .admin-bar .site-header { top: 32px; }
+.admin-bar .brands-jump-nav { top: 152px; } /* 32px admin bar + 120px header */
 body { padding-top: 120px; }
 body.home { padding-top: 0; }
 body.nav-open { overflow: hidden; }
 @media (max-width: 782px) {
 	.admin-bar .site-header { top: 46px; }
+	.admin-bar .brands-jump-nav { top: 166px; } /* 46px admin bar + 120px header */
 }
 
 /* =========================================================
@@ -1399,6 +1401,9 @@ body.nav-open { overflow: hidden; }
 .brand-section {
 	padding-block: var(--section-pad);
 	scroll-margin-top: 168px; /* fixed header (120) + jump nav (~48) */
+}
+.admin-bar .brand-section {
+	scroll-margin-top: 200px; /* 168px + 32px admin bar */
 }
 
 /* Even sections: charcoal background with optional image + overlay */
