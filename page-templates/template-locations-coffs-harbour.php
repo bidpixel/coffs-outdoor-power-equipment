@@ -12,7 +12,7 @@ $store_image  = get_theme_mod( 'loc_coffs_store_image', get_template_directory_u
 	<div style="position:absolute;inset:0;background:rgba(26,26,26,0.82);"></div>
 	<div class="container" style="position:relative;z-index:2;">
 		<h1><?php echo esc_html( get_theme_mod( 'loc_coffs_h1', 'Coffs Harbour Outdoor Power Equipment' ) ); ?></h1>
-		<p class="page-hero__intro"><?php echo esc_html( get_theme_mod( 'loc_coffs_intro', "Located at Sapphire Beach, our Coffs Harbour store brings the same expertise and product range you'd expect from over 30 years in the industry. We're your local authorised STIHL and Honda dealer — and we also stock COX, Kress, Greenfield, Stiga and more." ) ); ?></p>
+		<p class="page-hero__intro"><?php echo esc_html( get_theme_mod( 'loc_coffs_intro', "Located at Sapphire Beach, our Coffs Harbour store brings the same expertise and product range you'd expect from over 30 years in the industry. We're your local authorised STIHL and Honda dealer, and we also stock COX, Kress, Greenfield, Stiga and more." ) ); ?></p>
 	</div>
 </div>
 
@@ -65,12 +65,15 @@ $store_image  = get_theme_mod( 'loc_coffs_store_image', get_template_directory_u
 								allowfullscreen
 								loading="lazy"
 								referrerpolicy="no-referrer-when-downgrade"
-								title="Coffs Harbour Outdoor Power Equipment — 16 Wakelands Road, Sapphire Beach NSW 2450"
+								title="Coffs Harbour Outdoor Power Equipment, 16 Wakelands Road, Sapphire Beach NSW 2450"
 							></iframe>
 						</div>
 						<div class="location-cta">
 							<a class="btn btn--primary" href="https://maps.app.goo.gl/2i7si1rnu49NJaXr9" target="_blank" rel="noopener noreferrer">Get directions</a>
 							<a class="btn btn--outline" href="<?php echo esc_attr( coffsope_phone_link('coffs') ); ?>">Call us</a>
+							<a class="store-social-link" href="<?php echo esc_url( coffsope_facebook('coffs') ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Facebook: Coffs Harbour Outdoor Power Equipment">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -83,12 +86,12 @@ $store_image  = get_theme_mod( 'loc_coffs_store_image', get_template_directory_u
 
 				<div class="location-content-section">
 					<h2><?php echo esc_html( get_theme_mod( 'loc_coffs_stock_heading', 'What we stock' ) ); ?></h2>
-					<p><?php echo esc_html( get_theme_mod( 'loc_coffs_stock_body', 'From push mowers and brushcutters to chainsaws and generators — we carry the full range. As an authorised STIHL and Honda dealer, we can also assist with genuine parts and warranty support.' ) ); ?></p>
+					<p><?php echo esc_html( get_theme_mod( 'loc_coffs_stock_body', 'From push mowers and brushcutters to chainsaws and generators. We carry the full range. As an authorised STIHL and Honda dealer, we can also assist with genuine parts and warranty support.' ) ); ?></p>
 				</div>
 
 				<div class="location-content-section">
 					<h2><?php echo esc_html( get_theme_mod( 'loc_coffs_workshop_heading', 'Workshop & repairs' ) ); ?></h2>
-					<p><?php echo esc_html( get_theme_mod( 'loc_coffs_workshop_body', 'Our on-site workshop handles servicing and repairs for most major brands. Drop in for a diagnostic — no booking required.' ) ); ?></p>
+					<p><?php echo esc_html( get_theme_mod( 'loc_coffs_workshop_body', 'Our on-site workshop handles servicing and repairs for most major brands. Drop in for a diagnostic. No booking required.' ) ); ?></p>
 					<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/servicing' ) ); ?>" style="margin-top:1rem;display:inline-flex;">Learn about servicing</a>
 				</div>
 

@@ -9,7 +9,7 @@ function coffs_product_img( $file ) {
 		<div class="section-header">
 			<span class="section-label"><?php echo esc_html( get_theme_mod( 'hp_products_label', 'What we stock' ) ); ?></span>
 			<h2 class="section-heading"><?php echo esc_html( get_theme_mod( 'hp_products_heading', "Whatever the job, we've got the gear." ) ); ?></h2>
-			<p class="section-intro"><?php echo esc_html( get_theme_mod( 'hp_products_intro', 'Browse our range of quality outdoor power equipment. From chainsaws and ride-on mowers to generators and pressure cleaners — if you need it for your property, we stock it.' ) ); ?></p>
+			<p class="section-intro"><?php echo esc_html( get_theme_mod( 'hp_products_intro', 'Browse our range of quality outdoor power equipment. From chainsaws and ride-on mowers to generators and pressure cleaners. If you need it for your property, we stock it.' ) ); ?></p>
 		</div>
 
 		<div class="products__grid">

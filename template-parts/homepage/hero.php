@@ -24,7 +24,7 @@ $hero_image = get_theme_mod( 'hp_hero_image', get_template_directory_uri() . '/a
 				<?php echo esc_html( get_theme_mod( 'hp_hero_headline', "The Coffs Coast's home for outdoor power equipment." ) ); ?>
 			</h1>
 			<p class="hero__subheadline">
-				<?php echo esc_html( get_theme_mod( 'hp_hero_subheadline', 'Two locations, 30 years of expertise, and the brands you trust — STIHL, Honda, COX and more.' ) ); ?>
+				<?php echo esc_html( get_theme_mod( 'hp_hero_subheadline', 'Two locations, 30 years of expertise, and the brands you trust: STIHL, Honda, COX and more.' ) ); ?>
 			</p>
 			<div class="hero__ctas">
 				<a class="btn btn--primary" href="#products"><?php echo esc_html( get_theme_mod( 'hp_hero_cta1', 'View our products' ) ); ?></a>

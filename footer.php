@@ -25,15 +25,7 @@
 							>
 						</a>
 					</div>
-					<p class="site-footer__about">Urunga Chainsaw &amp; Mower and Coffs Harbour Outdoor Power Equipment — locally owned outdoor power equipment specialists serving the Coffs Coast for over 30 years.</p>
-					<div class="footer-social">
-						<a href="<?php echo esc_url( coffsope_facebook('urunga') ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Facebook — Urunga Chainsaw &amp; Mower">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-						</a>
-						<a href="<?php echo esc_url( coffsope_facebook('coffs') ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Facebook — Coffs Harbour Outdoor Power Equipment">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-						</a>
-					</div>
+					<p class="site-footer__about">Urunga Chainsaw &amp; Mower and Coffs Harbour Outdoor Power Equipment, locally owned outdoor power equipment specialists serving the Coffs Coast for over 30 years.</p>
 				</div>
 
 				<div class="site-footer__col">

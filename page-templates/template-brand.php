@@ -102,8 +102,8 @@ $categories = $brand_categories[ $slug ] ?? [];
 
 		<div style="margin-top:3rem;padding-top:3rem;border-top:1px solid var(--color-charcoal);">
 			<div style="display:flex;flex-wrap:wrap;gap:1rem;">
-				
-				<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Talk to us</a>
+				<a class="btn btn--outline" href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>">Call Urunga: <?php echo esc_html( coffsope_phone('urunga') ); ?></a>
+				<a class="btn btn--outline" href="<?php echo esc_attr( coffsope_phone_link('coffs') ); ?>">Call Coffs Harbour: <?php echo esc_html( coffsope_phone('coffs') ); ?></a>
 			</div>
 		</div>
 

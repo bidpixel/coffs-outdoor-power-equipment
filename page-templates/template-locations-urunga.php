@@ -12,7 +12,7 @@ $store_image  = get_theme_mod( 'loc_urunga_store_image', get_template_directory_
 	<div style="position:absolute;inset:0;background:rgba(26,26,26,0.82);"></div>
 	<div class="container" style="position:relative;z-index:2;">
 		<h1><?php echo esc_html( get_theme_mod( 'loc_urunga_h1', 'Urunga Chainsaw & Mower' ) ); ?></h1>
-		<p class="page-hero__intro"><?php echo esc_html( get_theme_mod( 'loc_urunga_intro', "We've been part of the Urunga community for over 30 years. Whether you're after a new chainsaw, a ride-on mower for your acreage, or just need your brushcutter serviced, our team is here to help — with honest advice and no pressure." ) ); ?></p>
+		<p class="page-hero__intro"><?php echo esc_html( get_theme_mod( 'loc_urunga_intro', "We've been part of the Urunga community for over 30 years. Whether you're after a new chainsaw, a ride-on mower for your acreage, or just need your brushcutter serviced, our team is here to help, with honest advice and no pressure." ) ); ?></p>
 	</div>
 </div>
 
@@ -57,12 +57,15 @@ $store_image  = get_theme_mod( 'loc_urunga_store_image', get_template_directory_
 								allowfullscreen
 								loading="lazy"
 								referrerpolicy="no-referrer-when-downgrade"
-								title="Urunga Chainsaw &amp; Mower — 1 Marina Crescent, Urunga NSW 2455"
+								title="Urunga Chainsaw &amp; Mower, 1 Marina Crescent, Urunga NSW 2455"
 							></iframe>
 						</div>
 						<div class="location-cta">
 							<a class="btn btn--primary" href="https://maps.app.goo.gl/HjYxUSK3DPKGZTcf7" target="_blank" rel="noopener noreferrer">Get directions</a>
 							<a class="btn btn--outline" href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>">Call us</a>
+							<a class="store-social-link" href="<?php echo esc_url( coffsope_facebook('urunga') ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Facebook: Urunga Chainsaw &amp; Mower">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -75,12 +78,12 @@ $store_image  = get_theme_mod( 'loc_urunga_store_image', get_template_directory_
 
 				<div class="location-content-section">
 					<h2><?php echo esc_html( get_theme_mod( 'loc_urunga_stock_heading', 'What we stock' ) ); ?></h2>
-					<p><?php echo esc_html( get_theme_mod( 'loc_urunga_stock_body', "We carry a full range of outdoor power equipment from the brands that work — STIHL, Honda, COX, Kress, Greenfield, Stiga and more. Whether it's for the home garden or a working rural property, we'll help you find the right tool for the job." ) ); ?></p>
+					<p><?php echo esc_html( get_theme_mod( 'loc_urunga_stock_body', "We carry a full range of outdoor power equipment from the brands that work: STIHL, Honda, COX, Kress, Greenfield, Stiga and more. Whether it's for the home garden or a working rural property, we'll help you find the right tool for the job." ) ); ?></p>
 				</div>
 
 				<div class="location-content-section">
 					<h2><?php echo esc_html( get_theme_mod( 'loc_urunga_workshop_heading', 'Workshop & repairs' ) ); ?></h2>
-					<p><?php echo esc_html( get_theme_mod( 'loc_urunga_workshop_body', 'Our Urunga store has a fully equipped workshop on site. We service and repair most makes and models — mowers, chainsaws, brushcutters, generators and pumps. No booking needed for a basic drop-in diagnostic.' ) ); ?></p>
+					<p><?php echo esc_html( get_theme_mod( 'loc_urunga_workshop_body', 'Our Urunga store has a fully equipped workshop on site. We service and repair most makes and models: mowers, chainsaws, brushcutters, generators and pumps. No booking needed for a basic drop-in diagnostic.' ) ); ?></p>
 					<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/servicing' ) ); ?>" style="margin-top:1rem;display:inline-flex;">Learn about servicing</a>
 				</div>
 

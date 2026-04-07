@@ -22,7 +22,7 @@ $brands = [
 		'name'       => 'Honda',
 		'logo'       => get_theme_mod( 'brand_logo_honda', $theme_img . '/brands/honda-power-equipment-logo.png' ),
 		'image'      => $theme_img . '/products/honda-eu22i-generator-key-features.jpg',
-		'blurb'      => "Legendary Honda reliability in every product. As an authorised Honda Power Equipment dealer, we stock a broad range of mowers, generators, water pumps, and more — backed by the Honda name and our in-house service team.",
+		'blurb'      => "Legendary Honda reliability in every product. As an authorised Honda Power Equipment dealer, we stock a broad range of mowers, generators, water pumps, and more, backed by the Honda name and our in-house service team.",
 		'categories' => [ 'Mowers', 'Generators', 'Water pumps', 'Hedge trimmers', 'Brushcutters', 'Tillers', 'Accessories' ],
 		'url'        => 'https://powerequipment.honda.com.au/',
 	],
@@ -54,7 +54,7 @@ $brands = [
 		'name'       => 'Kress',
 		'logo'       => get_theme_mod( 'brand_logo_kress', $theme_img . '/brands/kress-logo.png' ),
 		'image'      => $theme_img . '/products/kress-kr173e-robot-mower.webp',
-		'blurb'      => "German-engineered cordless outdoor tools running on the Kress 60V CyberSystem. One battery platform powers the full range — including robotic mowers — making Kress a smart, future-proof investment for your property.",
+		'blurb'      => "German-engineered cordless outdoor tools running on the Kress 60V CyberSystem. One battery platform powers the full range, including robotic mowers, making Kress a smart, future-proof investment for your property.",
 		'categories' => [ 'Battery chainsaws', 'Battery mowers', 'Battery brushcutters', 'Battery blowers', 'Battery hedge trimmers', 'Robotic mowers' ],
 		'url'        => 'https://www.kress.com/en-au/',
 	],
@@ -70,7 +70,7 @@ $brands = [
 		'name'       => 'STIGA',
 		'logo'       => get_theme_mod( 'brand_logo_stiga', $theme_img . '/brands/stiga-logo.png' ),
 		'image'      => $theme_img . '/products/stiga-tornado-ride-on-mower.jpg',
-		'blurb'      => "Swedish outdoor power equipment combining smart technology with Scandinavian build quality. STIGA's range spans ride-ons, robotic mowers, and battery-powered tools — designed for a quieter, smarter outdoor experience.",
+		'blurb'      => "Swedish outdoor power equipment combining smart technology with Scandinavian build quality. STIGA's range spans ride-ons, robotic mowers, and battery-powered tools, designed for a quieter, smarter outdoor experience.",
 		'categories' => [ 'Ride-on mowers', 'Robotic mowers', 'Walk-behind mowers', 'Battery-powered range', 'Accessories' ],
 		'url'        => 'https://stigamower.com.au/',
 	],
@@ -108,7 +108,7 @@ $brands = [
 			<?php if ( get_the_content() ) : ?>
 				<p class="page-hero__intro"><?php the_content(); ?></p>
 			<?php else : ?>
-				<p class="page-hero__intro">Coffs Harbour's authorised dealer for STIHL and Honda, stocking a full range of outdoor power equipment from the world's most trusted brands. From chainsaws and ride-on mowers to generators, robotic mowers, and battery-powered tools — we carry, service, and back everything we sell.</p>
+				<p class="page-hero__intro">Coffs Harbour's authorised dealer for STIHL and Honda, stocking a full range of outdoor power equipment from the world's most trusted brands. From chainsaws and ride-on mowers to generators, robotic mowers, and battery-powered tools. We carry, service, and back everything we sell.</p>
 			<?php endif; ?>
 		<?php endwhile; ?>
 	</div>
