@@ -93,13 +93,23 @@
 
 	// ── Scroll-aware header ─────────────────────────────────
 	const header = document.querySelector('.site-header');
+	const brandsJumpNav = document.querySelector('.brands-jump-nav');
 	if (header) {
-		let lastScroll = 0;
+		function updateJumpNav(scrolled) {
+			if (brandsJumpNav) {
+				const adminBar = document.getElementById('wpadminbar');
+				const adminBarHeight = adminBar ? adminBar.offsetHeight : 0;
+				const headerHeight = scrolled ? 72 : 120;
+				brandsJumpNav.style.top = (adminBarHeight + headerHeight) + 'px';
+			}
+		}
 		window.addEventListener('scroll', function () {
-			const current = window.scrollY;
-			header.classList.toggle('is-scrolled', current > 40);
-			lastScroll = current;
+			const scrolled = window.scrollY > 40;
+			header.classList.toggle('is-scrolled', scrolled);
+			updateJumpNav(scrolled);
 		}, { passive: true });
+		// Set correct position on load
+		updateJumpNav(false);
 	}
 
 	// ── Contact form ────────────────────────────────────────

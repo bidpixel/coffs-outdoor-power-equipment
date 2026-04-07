@@ -1358,14 +1358,24 @@ body.nav-open { overflow: hidden; }
 
 /* Jump nav */
 .brands-jump-nav {
-	position: sticky;
+	position: fixed;
 	top: 120px;
+	left: 0;
+	right: 0;
 	z-index: 90;
 	background-color: var(--color-charcoal);
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	scrollbar-width: none;
+}
+/* top is set dynamically by JS; CSS values are no-JS fallbacks */
+.admin-bar .brands-jump-nav {
+	top: 152px;
+}
+/* Match the header's shrink transition */
+.brands-jump-nav {
+	transition: top 0.3s ease;
 }
 .brands-jump-nav::-webkit-scrollbar { display: none; }
 .brands-jump-nav__inner {
@@ -1396,9 +1406,20 @@ body.nav-open { overflow: hidden; }
 
 /* Brand sections */
 
+/* Offset page content so it clears the fixed jump nav (header 120px + jump nav ~48px) */
+body.page-template-template-brands {
+	padding-top: 168px;
+}
+.admin-bar body.page-template-template-brands {
+	padding-top: 200px; /* 32px admin bar + 120px header + 48px jump nav */
+}
+
 .brand-section {
 	padding-block: var(--section-pad);
 	scroll-margin-top: 168px; /* fixed header (120) + jump nav (~48) */
+}
+.admin-bar .brand-section {
+	scroll-margin-top: 200px;
 }
 
 /* Even sections: charcoal background with optional image + overlay */
@@ -1768,7 +1789,11 @@ body.nav-open { overflow: hidden; }
 	.site-footer__logo a { flex-wrap: wrap; }
 	.site-footer__logo img { height: 44px; }
 	.brands-jump-nav { top: 72px; }
+	body.page-template-template-brands { padding-top: 120px; } /* 72px header + 48px jump nav */
+	.admin-bar .brands-jump-nav { top: 118px; } /* 46px admin bar + 72px header */
+	.admin-bar body.page-template-template-brands { padding-top: 166px; }
 	.brand-section { scroll-margin-top: 120px; }
+	.admin-bar .brand-section { scroll-margin-top: 166px; }
 	.brand-section__grid { grid-template-columns: 1fr; gap: 2rem; }
 	.brand-section__logo-wrap { max-width: 220px; min-height: auto; padding: 1.5rem 2rem; }
 	.brands-page-cta__inner { flex-direction: column; align-items: flex-start; }
