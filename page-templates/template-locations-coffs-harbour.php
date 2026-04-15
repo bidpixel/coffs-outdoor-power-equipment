@@ -12,7 +12,7 @@ $store_image  = get_theme_mod( 'loc_coffs_store_image', get_template_directory_u
 	<div style="position:absolute;inset:0;background:rgba(26,26,26,0.82);"></div>
 	<div class="container" style="position:relative;z-index:2;">
 		<h1><?php echo esc_html( get_theme_mod( 'loc_coffs_h1', 'Coffs Harbour Outdoor Power Equipment' ) ); ?></h1>
-		<p class="page-hero__intro"><?php echo esc_html( get_theme_mod( 'loc_coffs_intro', "Located at Sapphire Beach, our Coffs Harbour store brings the same expertise and product range you'd expect from over 30 years in the industry. We're your local authorised STIHL and Honda dealer, and we also stock COX, Kress, Greenfield, Stiga and more." ) ); ?></p>
+		<p class="page-hero__intro"><?php echo esc_html( get_theme_mod( 'loc_coffs_intro', "Located at Sapphire Beach, our Coffs Harbour store brings the same expertise and product range you'd expect from over 45 years in the industry. We're your local authorised STIHL and Honda dealer, and we also stock COX, Kress, Greenfield and more." ) ); ?></p>
 	</div>
 </div>
 
@@ -58,7 +58,7 @@ $store_image  = get_theme_mod( 'loc_coffs_store_image', get_template_directory_u
 						</dl>
 						<div class="map-embed" style="margin-bottom:1.25rem;">
 							<iframe
-								src="https://maps.google.com/maps?q=16+Wakelands+Road+Sapphire+Beach+NSW+2450&output=embed"
+								src="https://maps.google.com/maps?q=Coffs+Harbour+Outdoor+Power+Equipment+Sapphire+Beach+NSW&output=embed"
 								width="100%"
 								height="100%"
 								style="border:0;"
@@ -97,6 +97,11 @@ $store_image  = get_theme_mod( 'loc_coffs_store_image', get_template_directory_u
 
 				<div class="location-content-section">
 					<p class="also-serving"><strong style="color:var(--color-white);">Also serving:</strong> <?php echo esc_html( get_theme_mod( 'loc_coffs_also_serving', 'Woolgoolga, Moonee Beach, Korora, Boambee and surrounding Coffs Harbour communities.' ) ); ?></p>
+				</div>
+
+				<div class="location-content-section" style="border-top:2px solid var(--color-orange);padding-top:1.5rem;margin-top:0.5rem;">
+					<p style="margin-bottom:0.75rem;font-weight:600;color:var(--color-orange);">Looking for our Urunga store?</p>
+					<a class="btn btn--primary" href="<?php echo esc_url( home_url( '/urunga' ) ); ?>">View Urunga store</a>
 				</div>
 
 			</div>

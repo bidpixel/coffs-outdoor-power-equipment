@@ -24,7 +24,7 @@ $services = [
 		'heading'  => get_theme_mod( 'serv_chainsaw_heading', 'Chainsaw servicing' ),
 		'body1'    => get_theme_mod( 'serv_chainsaw_body1', 'Keep your saw cutting clean and safe. We carry out full chainsaw servicing including chain sharpening, bar inspection, air filter cleaning, spark plug replacement, fuel system checks and general tune-ups.' ),
 		'body2'    => get_theme_mod( 'serv_chainsaw_body2', "Whether it's a STIHL, Husqvarna or another brand. If it's a chainsaw, we can service it." ),
-		'image'    => get_theme_mod( 'serv_chainsaw_image', $serv_base . 'outdoor-power-equipment-repair-coffs-coast-2.jpg' ),
+		'image'    => get_theme_mod( 'serv_chainsaw_image', $serv_base . 'chainsaw-servicing-workshop.jpg' ),
 		'alt'      => 'Chainsaw servicing at our Coffs Coast workshop',
 	],
 	[
@@ -94,7 +94,7 @@ foreach ( $services as $i => $svc ) :
 					</div>
 					<div class="contact-store-card__info">
 						<h3>Urunga Chainsaw &amp; Mower</h3>
-						<p>1 Marina Crescent, Urunga NSW 2455</p>
+						<p>Lot 1/2 Marina Crescent, Urunga NSW 2455</p>
 						<p>Phone: <a href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>"><?php echo esc_html( coffsope_phone('urunga') ); ?></a></p>
 						<p>Mon–Fri 8:30am–5:00pm</p>
 						<div class="contact-store-card__actions">

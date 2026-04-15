@@ -71,7 +71,7 @@
 							<li><a href="<?php echo esc_url( home_url( '/brands#kress' ) ); ?>">Kress</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/brands#greenfield' ) ); ?>">Greenfield</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/brands#spika' ) ); ?>">Spika</a></li>
-							<li><a href="<?php echo esc_url( home_url( '/brands#rato' ) ); ?>">Rato</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/brands#wright' ) ); ?>">Wright</a></li>
 						</ul>
 					</li>
 
@@ -86,11 +86,11 @@
 					</li>
 
 					<li class="primary-nav__item">
-						<a class="primary-nav__link" href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a>
+						<a class="primary-nav__link" href="<?php echo esc_url( home_url( '/finance' ) ); ?>">Finance</a>
 					</li>
 
 					<li class="primary-nav__item">
-						<a class="primary-nav__link" href="<?php echo esc_url( home_url( '/finance' ) ); ?>">Finance</a>
+						<a class="primary-nav__link" href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a>
 					</li>
 
 				</ul>
@@ -171,7 +171,7 @@
 				<a href="<?php echo esc_url( home_url( '/brands#kress' ) ); ?>">Kress</a>
 				<a href="<?php echo esc_url( home_url( '/brands#greenfield' ) ); ?>">Greenfield</a>
 				<a href="<?php echo esc_url( home_url( '/brands#spika' ) ); ?>">Spika</a>
-				<a href="<?php echo esc_url( home_url( '/brands#rato' ) ); ?>">Rato</a>
+				<a href="<?php echo esc_url( home_url( '/brands#wright' ) ); ?>">Wright</a>
 			</div>
 		</li>
 
@@ -185,8 +185,8 @@
 			</div>
 		</li>
 
-<li><a class="mobile-nav__link" href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a></li>
-		<li><a class="mobile-nav__link" href="<?php echo esc_url( home_url( '/finance' ) ); ?>">Finance</a></li>
+<li><a class="mobile-nav__link" href="<?php echo esc_url( home_url( '/finance' ) ); ?>">Finance</a></li>
+		<li><a class="mobile-nav__link" href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a></li>
 
 	</ul>
 

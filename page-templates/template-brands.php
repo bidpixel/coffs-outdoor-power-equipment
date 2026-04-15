@@ -66,14 +66,6 @@ $brands = [
 		'categories' => [ 'Ride-on mowers', 'Zero-turn mowers' ],
 		'url'        => 'https://greenfield.com.au/',
 	],
-	'stiga' => [
-		'name'       => 'STIGA',
-		'logo'       => get_theme_mod( 'brand_logo_stiga', $theme_img . '/brands/stiga-logo.png' ),
-		'image'      => $theme_img . '/products/stiga-tornado-ride-on-mower.jpg',
-		'blurb'      => "Swedish outdoor power equipment combining smart technology with Scandinavian build quality. STIGA's range spans ride-ons, robotic mowers, and battery-powered tools, designed for a quieter, smarter outdoor experience.",
-		'categories' => [ 'Ride-on mowers', 'Robotic mowers', 'Walk-behind mowers', 'Battery-powered range', 'Accessories' ],
-		'url'        => 'https://stigamower.com.au/',
-	],
 	'spika' => [
 		'name'       => 'Spika',
 		'logo'       => get_theme_mod( 'brand_logo_spika', $theme_img . '/brands/spika-logo.png' ),
@@ -82,6 +74,14 @@ $brands = [
 		'categories' => [ 'Gun safes', 'Firearm accessories', 'Camo clothing', 'Hunting knives', 'Hunting packs', 'Field gear' ],
 		'url'        => 'https://spika.com.au/',
 	],
+	'wright' => [
+		'name'       => 'Wright',
+		'logo'       => get_theme_mod( 'brand_logo_wright', $theme_img . '/brands/wright-logo.png' ),
+		'image'      => $theme_img . '/products/wright-zero-turn-mower.webp',
+		'blurb'      => "Commercial zero-turn mowers built for demanding turf maintenance and high-use environments. Wright ZTR mowers combine robust construction with zero-turn maneuverability for faster, more precise mowing across large areas. Available in the ZXL mid-size and ZXT large chassis models, distributed in Australia through COX Mowers.",
+		'categories' => [ 'Wright ZXL (mid-size)', 'Wright ZXT (large chassis)' ],
+		'url'        => 'https://coxmowers.com.au/collections/wright-ztr',
+	],
 	'supaswift' => [
 		'name'       => 'Supaswift',
 		'logo'       => get_theme_mod( 'brand_logo_supaswift', $theme_img . '/brands/supaswift-logo.webp' ),
@@ -89,14 +89,6 @@ $brands = [
 		'blurb'      => "Quality push mowers built for Australian lawns. Supaswift delivers reliable, no-fuss performance at a competitive price point.",
 		'categories' => [ 'Push mowers' ],
 		'url'        => 'https://supaswift.com.au/',
-	],
-	'rato' => [
-		'name'       => 'RATO',
-		'logo'       => get_theme_mod( 'brand_logo_rato', $theme_img . '/brands/rato-logo.png' ),
-		'image'      => $theme_img . '/products/generators-coffs-coast.jpg',
-		'blurb'      => "Reliable and affordable generators and water pumps built for everyday use. RATO products offer solid performance for backup power, trade, and irrigation applications without the premium price tag.",
-		'categories' => [ 'Generators', 'Water pumps', 'Accessories' ],
-		'url'        => 'https://ratopowerproducts.com.au/',
 	],
 ];
 ?>

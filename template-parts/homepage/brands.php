@@ -8,9 +8,8 @@ $logo_gravely     = get_theme_mod( 'brand_logo_gravely',     $theme_img . 'grave
 $logo_kress       = get_theme_mod( 'brand_logo_kress',       $theme_img . 'kress-logo.png' );
 $logo_greenfield  = get_theme_mod( 'brand_logo_greenfield',  $theme_img . 'greenfield-logo.png' );
 $logo_spika       = get_theme_mod( 'brand_logo_spika',       $theme_img . 'spika-logo.png' );
-$logo_stiga       = get_theme_mod( 'brand_logo_stiga',       $theme_img . 'stiga-logo.png' );
 $logo_supaswift   = get_theme_mod( 'brand_logo_supaswift',   $theme_img . 'supaswift-logo.webp' );
-$logo_rato        = get_theme_mod( 'brand_logo_rato',        $theme_img . 'rato-logo.png' );
+$logo_wright      = get_theme_mod( 'brand_logo_wright',      $theme_img . 'wright-logo.png' );
 ?>
 
 <section class="brands section-pad">
@@ -19,7 +18,7 @@ $logo_rato        = get_theme_mod( 'brand_logo_rato',        $theme_img . 'rato-
 		<div class="section-header section-header--center">
 			<span class="section-label"><?php echo esc_html( get_theme_mod( 'hp_brands_label', 'Our brands' ) ); ?></span>
 			<h2 class="section-heading"><?php echo esc_html( get_theme_mod( 'hp_brands_heading', 'Brands worth trusting.' ) ); ?></h2>
-			<p class="section-intro"><?php echo esc_html( get_theme_mod( 'hp_brands_intro', 'As an authorised dealer for STIHL and Honda, we can offer genuine advice, genuine parts and genuine backup when you need it. We also stock COX, Ariens, Gravely, Kress, Greenfield, Stiga, Supaswift and Rato. Quality equipment for every budget and job size.' ) ); ?></p>
+			<p class="section-intro"><?php echo esc_html( get_theme_mod( 'hp_brands_intro', 'As an authorised dealer for STIHL and Honda, we can offer genuine advice, genuine parts and genuine backup when you need it. We also stock COX, Ariens, Gravely, Kress, Greenfield, Supaswift and Wright. Quality equipment for every budget and job size.' ) ); ?></p>
 		</div>
 
 		<div class="brands__grid">
@@ -88,14 +87,6 @@ $logo_rato        = get_theme_mod( 'brand_logo_rato',        $theme_img . 'rato-
 				<?php endif; ?>
 			</a>
 
-			<a class="brand-logo" href="<?php echo esc_url( home_url( '/brands#stiga' ) ); ?>" aria-label="Stiga: view products">
-				<?php if ( $logo_stiga ) : ?>
-					<img src="<?php echo esc_url( $logo_stiga ); ?>" alt="Stiga" loading="lazy">
-				<?php else : ?>
-					<span style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-white);letter-spacing:0.05em;">STIGA</span>
-				<?php endif; ?>
-			</a>
-
 			<a class="brand-logo" href="<?php echo esc_url( home_url( '/brands#supaswift' ) ); ?>" aria-label="Supaswift: view products">
 				<?php if ( $logo_supaswift ) : ?>
 					<img src="<?php echo esc_url( $logo_supaswift ); ?>" alt="Supaswift" loading="lazy">
@@ -104,11 +95,11 @@ $logo_rato        = get_theme_mod( 'brand_logo_rato',        $theme_img . 'rato-
 				<?php endif; ?>
 			</a>
 
-			<a class="brand-logo" href="<?php echo esc_url( home_url( '/brands#rato' ) ); ?>" aria-label="Rato: view products">
-				<?php if ( $logo_rato ) : ?>
-					<img src="<?php echo esc_url( $logo_rato ); ?>" alt="Rato" loading="lazy">
+			<a class="brand-logo" href="<?php echo esc_url( home_url( '/brands#wright' ) ); ?>" aria-label="Wright: view products">
+				<?php if ( $logo_wright ) : ?>
+					<img src="<?php echo esc_url( $logo_wright ); ?>" alt="Wright" loading="lazy">
 				<?php else : ?>
-					<span style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-white);letter-spacing:0.05em;">RATO</span>
+					<span style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-white);letter-spacing:0.05em;">WRIGHT</span>
 				<?php endif; ?>
 			</a>
 

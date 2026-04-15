@@ -69,11 +69,11 @@ $category_sections = [
 	'ride-on-mowers' => [
 		[
 			'heading' => 'Built for large blocks and acreage',
-			'body'    => 'If you\'re managing a large block, acreage or rural property across the Mid North Coast, a ride-on mower is the practical choice. We stock a range of ride-on models from COX, Greenfield and Stiga, built to handle the slopes, the grass types and the conditions you\'ll find in this part of New South Wales.',
+			'body'    => 'If you\'re managing a large block, acreage or rural property across the Mid North Coast, a ride-on mower is the practical choice. We stock a range of ride-on models from COX and Greenfield, built to handle the slopes, the grass types and the conditions you\'ll find in this part of New South Wales.',
 		],
 		[
 			'heading' => 'Brands that handle the terrain',
-			'body'    => 'COX is an Australian brand engineered for local conditions, with a solid reputation on rural properties up and down the east coast. Greenfield is known for its high-quality cut and reliable performance across a range of terrain. Stiga\'s garden tractor range brings European build quality to Australian acreage, with models that are comfortable to operate over longer mowing sessions.',
+			'body'    => 'COX is an Australian brand engineered for local conditions, with a solid reputation on rural properties up and down the east coast. Greenfield is known for its high-quality cut and reliable performance across a range of terrain, with models that are comfortable to operate over longer mowing sessions.',
 		],
 		[
 			'heading' => 'We help you find the right fit',
@@ -96,16 +96,16 @@ $category_sections = [
 	],
 	'robot-mowers' => [
 		[
-			'heading' => 'Set it and let it run',
-			'body'    => 'Robotic mowers are no longer a novelty. They\'re a genuinely practical solution for homeowners and property managers who want a consistently maintained lawn without the time commitment. Set a schedule, and the mower handles the rest: trimming little and often to keep your lawn looking its best year-round, with no effort on your part.',
+			'heading' => 'Your Kress robotic mower dealer on the Coffs Coast',
+			'body'    => 'We stock and support Kress robotic mowers at both our Urunga and Coffs Harbour stores. Kress is one of the strongest robotic mower platforms available, with models to suit a range of lawn sizes and shapes. If you want a consistently maintained lawn without the time commitment, a Kress robot mower is the practical answer.',
 		],
 		[
-			'heading' => 'STIHL and Kress robotic mowers',
-			'body'    => 'We stock STIHL and Kress robotic mowers on the Coffs Coast, with models to suit a range of lawn sizes and shapes. STIHL\'s iMOW range is backed by the same quality and dealer support you expect from the brand. Kress offers RTK GPS navigation for precise, boundary-wire-free operation, a standout feature for more complex or larger properties.',
+			'heading' => 'RTK GPS — no boundary wire required',
+			'body'    => 'Kress robotic mowers use RTK GPS navigation for precise, accurate operation across your entire lawn — no boundary wire needed. This makes installation significantly simpler and gives the mower the ability to handle more complex lawn layouts and larger properties with confidence. Set a schedule and let it handle the rest.',
 		],
 		[
-			'heading' => 'Setup and ongoing support',
-			'body'    => 'Come in to our Urunga or Coffs Harbour store to see the range and find out which model suits your lawn size, budget and setup. We assist with the initial installation and are here for ongoing support, servicing and genuine parts. Robotic mowers are low maintenance by design, but knowing your dealer has you covered makes a real difference.',
+			'heading' => 'We handle setup, support and servicing',
+			'body'    => 'Come in to our Urunga or Coffs Harbour store to see the range and find the right model for your lawn size and budget. We assist with initial setup and are here for ongoing support, servicing and genuine Kress parts. Robotic mowers are low maintenance by design, but having a local dealer behind you makes all the difference.',
 		],
 	],
 	'brushcutters' => [
@@ -128,8 +128,8 @@ $category_sections = [
 			'body'    => 'Whether it\'s backup power for your home during a storm, a reliable source of power for a worksite, or portable power for a rural property. The right generator makes life a lot easier. On the Coffs Coast and Mid North Coast, where severe weather events and power outages are a genuine consideration, having a generator you can rely on is worth investing in properly.',
 		],
 		[
-			'heading' => 'Honda, COX and Rato: generators for every need',
-			'body'    => 'We stock Honda, COX and Rato generators across a range of outputs and configurations. Honda generators are among the most trusted in the world, known for their quiet inverter technology, fuel efficiency and clean power output safe for sensitive electronics. COX offers solid, no-nonsense performance for worksites and rural properties. Rato rounds out the range with practical, well-priced generators well suited to home backup and general farm use on the Mid North Coast.',
+			'heading' => 'Honda and COX: generators for every need',
+			'body'    => 'We stock Honda and COX generators across a range of outputs and configurations. Honda generators are among the most trusted in the world, known for their quiet inverter technology, fuel efficiency and clean power output safe for sensitive electronics. COX offers solid, no-nonsense performance for worksites and rural properties across the Mid North Coast.',
 		],
 		[
 			'heading' => 'Getting the spec right',
@@ -156,8 +156,8 @@ $category_sections = [
 			'body'    => 'For anyone managing a rural property, hobby farm or large block on the Coffs Coast, a reliable water pump is essential. Whether you need to transfer water between tanks, irrigate a paddock, pump out after heavy rain, or set up a fire-fighting system for bushfire preparedness. The right pump for the job makes a real practical difference.',
 		],
 		[
-			'heading' => 'Honda, COX and Rato: quality pump options',
-			'body'    => 'We stock Honda, COX and Rato water pumps across a range of applications. Honda has built a well-deserved reputation for reliability and low maintenance, with centrifugal, trash and fire-fighting pumps to suit most property needs. COX offers solid Australian-proven performance for general water transfer and drainage. Rato rounds out the range with practical, competitively priced pumps well suited to rural and farm use across the Mid North Coast.',
+			'heading' => 'COX water pumps: built for Australian conditions',
+			'body'    => 'We stock COX water pumps across a range of applications, from compact transfer pumps for smaller jobs through to larger models built for serious water movement on rural properties. COX offers solid, Australian-proven performance for general water transfer, drainage, irrigation and more across the Mid North Coast.',
 		],
 		[
 			'heading' => 'Get the sizing right',
@@ -200,11 +200,11 @@ $category_subheadings = [
 	'lawn-mowers'        => 'Quality lawn mowers for every block size on the Mid North Coast: push, self-propelled and battery.',
 	'ride-on-mowers'     => 'Ride-on mowers for acreage and rural properties across the Mid North Coast. In stock, expert advice.',
 	'zero-turn-mowers'   => 'Zero-turn mowers for large properties on the Coffs Coast: residential to commercial grade.',
-	'robot-mowers'       => 'Robotic lawn mowers on the Coffs Coast: hands-free mowing from STIHL and Kress.',
+	'robot-mowers'       => 'Kress robotic mowers on the Coffs Coast. RTK GPS navigation, no boundary wire, hands-free mowing.',
 	'brushcutters'       => 'Petrol and battery brushcutters on the Coffs Coast, for home blocks to rural properties.',
 	'generators'         => 'Reliable generators for home, worksite and rural use on the Mid North Coast. Honda and COX in stock.',
 	'pressure-cleaners'  => 'STIHL pressure cleaners on the Coffs Coast: domestic to commercial grade, in stock now.',
-	'water-pumps'        => 'Honda water pumps for irrigation, drainage and fire-fighting on the Mid North Coast.',
+	'water-pumps'        => 'COX water pumps for irrigation, drainage and water transfer on the Mid North Coast.',
 	'garden-power-tools' => 'STIHL, Honda and Kress garden power tools: hedge trimmers, blowers, pole saws and more.',
 	'battery-electric'   => 'Battery outdoor power equipment on the Coffs Coast: STIHL and Kress systems in stock.',
 ];
@@ -228,13 +228,13 @@ $category_variations = [
 $category_brands = [
 	'chainsaws'          => [ 'stihl', 'honda', 'kress' ],
 	'lawn-mowers'        => [ 'honda', 'cox', 'stihl', 'supaswift' ],
-	'ride-on-mowers'     => [ 'cox', 'greenfield', 'stiga' ],
-	'zero-turn-mowers'   => [ 'cox', 'ariens', 'gravely' ],
-	'robot-mowers'       => [ 'stihl', 'kress' ],
-	'brushcutters'       => [ 'stihl', 'kress' ],
-	'generators'         => [ 'honda', 'cox', 'rato' ],
-	'pressure-cleaners'  => [ 'stihl', 'honda' ],
-	'water-pumps'        => [ 'honda', 'cox', 'rato' ],
+	'ride-on-mowers'     => [ 'cox', 'greenfield' ],
+	'zero-turn-mowers'   => [ 'cox', 'ariens', 'gravely', 'wright' ],
+	'robot-mowers'       => [ 'kress' ],
+	'brushcutters'       => [ 'stihl', 'honda', 'kress' ],
+	'generators'         => [ 'honda', 'cox' ],
+	'pressure-cleaners'  => [ 'stihl' ],
+	'water-pumps'        => [ 'cox' ],
 	'garden-power-tools' => [ 'stihl', 'honda', 'kress' ],
 	'battery-electric'   => [ 'stihl', 'kress' ],
 ];
@@ -243,6 +243,14 @@ $category_brands = [
 $section_image_positions = [
 	'pressure-cleaners' => [
 		2 => 'center bottom',
+	],
+];
+
+// Override object-fit for specific section images per category
+$section_image_fits = [
+	'water-pumps' => [
+		1 => 'contain',
+		2 => 'contain',
 	],
 ];
 
@@ -256,9 +264,8 @@ $brand_logo_defaults = [
 	'kress'      => $theme_img . '/brands/kress-logo.png',
 	'greenfield' => $theme_img . '/brands/greenfield-logo.png',
 	'spika'      => $theme_img . '/brands/spika-logo.png',
-	'stiga'      => $theme_img . '/brands/stiga-logo.png',
 	'supaswift'  => $theme_img . '/brands/supaswift-logo.webp',
-	'rato'       => $theme_img . '/brands/rato-logo.png',
+	'wright'     => $theme_img . '/brands/wright-logo.png',
 ];
 
 $brand_logo_mod_keys = [
@@ -270,9 +277,8 @@ $brand_logo_mod_keys = [
 	'kress'      => 'brand_logo_kress',
 	'greenfield' => 'brand_logo_greenfield',
 	'spika'      => 'brand_logo_spika',
-	'stiga'      => 'brand_logo_stiga',
 	'supaswift'  => 'brand_logo_supaswift',
-	'rato'       => 'brand_logo_rato',
+	'wright'     => 'brand_logo_wright',
 ];
 
 $brand_display_names = [
@@ -284,9 +290,8 @@ $brand_display_names = [
 	'kress'      => 'Kress',
 	'greenfield' => 'Greenfield',
 	'spika'      => 'Spika',
-	'stiga'      => 'Stiga',
 	'supaswift'  => 'Supaswift',
-	'rato'       => 'Rato',
+	'wright'     => 'Wright ZTR',
 ];
 
 $slug        = get_post_field( 'post_name', get_queried_object_id() );
@@ -299,13 +304,13 @@ $subheading  = $category_subheadings[ $slug ] ?? '';
 $category_image_files = [
 	'chainsaws'          => [ 'chainsaws-coffs-coast.jpg', 'stihl-chainsaw-coffs-coast-1.jpg', 'stihl-chainsaw-coffs-coast-2.jpg' ],
 	'lawn-mowers'        => [ 'lawn-mowers-coffs-coast.jpg', 'lawn-mower-coffs-coast-1.jpg', 'cox-46-lawn-mower.webp' ],
-	'ride-on-mowers'     => [ 'ride-on-mowers-coffs-coast.webp', 'ride-on-mower-lifestyle.jpg', 'stiga-tornado-ride-on-mower.jpg' ],
+	'ride-on-mowers'     => [ 'greenfield_products_page.jpg', 'ride-on-mowers-coffs-coast.webp', 'IMG_3249.webp' ],
 	'zero-turn-mowers'   => [ 'ariens-zero-turn-mower-banner.webp', 'zero-turn-mower-lifestyle-1.jpg', 'zero-turn-mowers-gravely-coffs-coast.jpg' ],
-	'robot-mowers'       => [ 'robot-mowers-kress-coffs-coast.jpg', 'kress-kr173e-robot-mower.webp', 'robot-mower-product-1.jpg' ],
-	'brushcutters'       => [ 'brushcutters-stihl-coffs-coast.webp', 'brushcutter-coffs-coast-1.jpg', 'stihl-fsa86-battery-brushcutter.webp' ],
+	'robot-mowers'       => [ 'robot-mowers-kress-coffs-coast.jpg', 'kress-kr173e-robot-mower.webp', 'kress-kr174-robot-mower.webp' ],
+	'brushcutters'       => [ 'honda-brushcutter-umk435.jpg', 'brushcutter-coffs-coast-1.jpg', 'stihl-fsa86-battery-brushcutter.webp' ],
 	'generators'         => [ 'generators-coffs-coast.jpg', 'honda-eu22i-generator-key-features.jpg', 'honda-generator-coffs-coast-1.jpg' ],
-	'pressure-cleaners'  => [ 'pressure-cleaners-coffs-coast.jpg', 'pressure-cleaner-coffs-coast-1.jpg', 'stihl-re100-pressure-cleaner.jpg' ],
-	'water-pumps'        => [ 'water-pump-coffs-coast-1.jpg', 'honda-water-pump-general-purpose.jpg', 'water-pump-coffs-coast-2.jpg' ],
+	'pressure-cleaners'  => [ 'pressure-cleaners-coffs-coast.jpg', 'pressure-cleaner-coffs-coast-1.jpg', 'stihl-rb400-petrol-pressure-cleaner.jpg' ],
+	'water-pumps'        => [ 'water-pump-lifestyle.jpg', 'cox-transfer-pump-cpt15.webp', 'cox-transfer-pump-cpt30.webp' ],
 	'garden-power-tools' => [ 'garden-power-tools-hedge-trimmer-coffs-coast.jpg', 'garden-power-tool-1.jpg', 'garden-power-tools-coffs-coast-2.jpg' ],
 	'battery-electric'   => [ 'battery-electric-outdoor-power-equipment-coffs-coast.jpg', 'battery-powered-outdoor-equipment-2.jpg', 'battery-electric-equipment-1.jpg' ],
 ];
@@ -345,13 +350,14 @@ $hero_img = $mod_key ? get_theme_mod( $mod_key, $fallback ) : $fallback;
 		<div class="cat-section__inner<?php echo esc_attr( $reverse ); ?>">
 			<?php if ( $img ) :
 				$obj_pos = $section_image_positions[ $slug ][ $i ] ?? 'center';
+				$obj_fit = $section_image_fits[ $slug ][ $i ] ?? 'cover';
 			?>
 				<div class="cat-section__image">
 					<img
 						src="<?php echo esc_url( $img ); ?>"
 						alt="<?php echo esc_attr( $section['heading'] ); ?>"
 						loading="<?php echo $i === 0 ? 'eager' : 'lazy'; ?>"
-						style="object-position:<?php echo esc_attr( $obj_pos ); ?>;"
+						style="object-fit:<?php echo esc_attr( $obj_fit ); ?>;object-position:<?php echo esc_attr( $obj_pos ); ?>;"
 					>
 				</div>
 			<?php endif; ?>

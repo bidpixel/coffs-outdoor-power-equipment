@@ -30,8 +30,9 @@ get_header();
 					</div>
 					<div class="contact-store-card__info">
 						<h3>Urunga Chainsaw &amp; Mower</h3>
-						<p>1 Marina Crescent, Urunga NSW 2455</p>
+						<p>Lot 1/2 Marina Crescent, Urunga NSW 2455</p>
 						<p>Phone: <a href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>"><?php echo esc_html( coffsope_phone('urunga') ); ?></a></p>
+						<p>Email: <a href="mailto:enquiries@urungachainsawandmower.com.au">enquiries@urungachainsawandmower.com.au</a></p>
 						<p>Mon–Fri 8:30am–5:00pm &nbsp;|&nbsp; Sat–Sun Closed</p>
 						<div class="contact-store-card__actions">
 							<a class="btn btn--primary contact-store-card__btn" href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>">Call now</a>

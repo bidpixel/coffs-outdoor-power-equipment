@@ -25,14 +25,15 @@
 							>
 						</a>
 					</div>
-					<p class="site-footer__about">Urunga Chainsaw &amp; Mower and Coffs Harbour Outdoor Power Equipment, locally owned outdoor power equipment specialists serving the Coffs Coast for over 30 years.</p>
+					<p class="site-footer__about">Urunga Chainsaw &amp; Mower and Coffs Harbour Outdoor Power Equipment, locally owned outdoor power equipment specialists serving the Coffs Coast for over 45 years.</p>
 				</div>
 
 				<div class="site-footer__col">
 					<h3 class="site-footer__col-heading">Urunga store</h3>
 					<div class="footer-store-detail">
-						<span>1 Marina Crescent, Urunga NSW 2455</span>
+						<span>Lot 1/2 Marina Crescent, Urunga NSW 2455</span>
 						<a href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>"><?php echo esc_html( coffsope_phone('urunga') ); ?></a>
+						<a href="mailto:enquiries@urungachainsawandmower.com.au">enquiries@urungachainsawandmower.com.au</a>
 						<span>Mon–Fri: 8:30am–5:00pm</span>
 						<span>Sat–Sun: Closed</span>
 					</div>

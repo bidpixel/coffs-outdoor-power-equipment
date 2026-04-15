@@ -16,9 +16,8 @@ $brand_logo_defaults = [
 	'kress'      => $theme_img . '/brands/kress-logo.png',
 	'greenfield' => $theme_img . '/brands/greenfield-logo.png',
 	'spika'      => $theme_img . '/brands/spika-logo.png',
-	'stiga'      => $theme_img . '/brands/stiga-logo.png',
 	'supaswift'  => $theme_img . '/brands/supaswift-logo.webp',
-	'rato'       => $theme_img . '/brands/rato-logo.png',
+	'wright'     => $theme_img . '/brands/wright-logo.png',
 ];
 
 $brand_logo_mod_keys = [
@@ -30,9 +29,8 @@ $brand_logo_mod_keys = [
 	'kress'      => 'brand_logo_kress',
 	'greenfield' => 'brand_logo_greenfield',
 	'spika'      => 'brand_logo_spika',
-	'stiga'      => 'brand_logo_stiga',
 	'supaswift'  => 'brand_logo_supaswift',
-	'rato'       => 'brand_logo_rato',
+	'wright'     => 'brand_logo_wright',
 ];
 
 $brand_logos = [];
@@ -50,9 +48,8 @@ $brand_categories = [
 	'kress'      => [ 'Battery chainsaws', 'Battery mowers', 'Battery brushcutters', 'Battery blowers', 'Battery hedge trimmers', 'Robotic mowers' ],
 	'greenfield' => [ 'Ride-on mowers', 'Zero-turn mowers' ],
 	'spika'      => [ 'Gun safes', 'Firearm accessories', 'Camo clothing', 'Hunting knives', 'Hunting packs', 'Field gear' ],
-	'stiga'      => [ 'Ride-on mowers', 'Robotic mowers', 'Walk-behind mowers', 'Battery-powered range', 'Accessories' ],
 	'supaswift'  => [ 'Push mowers' ],
-	'rato'       => [ 'Generators', 'Water pumps', 'Accessories' ],
+	'wright'     => [ 'Wright ZXL (mid-size)', 'Wright ZXT (large chassis)' ],
 ];
 
 $slug       = get_post_field( 'post_name', get_queried_object_id() );

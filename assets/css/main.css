@@ -412,24 +412,51 @@ body.home .site-header.is-scrolled {
 .mobile-nav__list { display: flex; flex-direction: column; gap: 0; }
 .mobile-nav__link {
 	display: block;
-	padding: 0.875rem 0;
-	font-size: 1.125rem;
+	width: 100%;
+	padding: 1rem 0;
+	font-size: 1.2rem;
 	font-weight: 600;
 	color: var(--color-white);
-	border-bottom: 1px solid var(--color-charcoal);
+	background: none;
+	border: none;
+	border-bottom: 1px solid rgba(255,255,255,0.12);
+	text-align: left;
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.mobile-nav__toggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.mobile-nav__toggle::after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-right: 2px solid var(--color-orange);
+	border-bottom: 2px solid var(--color-orange);
+	transform: rotate(45deg);
+	transition: transform 0.2s ease;
+	flex-shrink: 0;
+}
+.mobile-nav__toggle[aria-expanded="true"]::after {
+	transform: rotate(-135deg);
 }
 .mobile-nav__sub {
 	display: none;
 	padding-left: 1.25rem;
-	border-bottom: 1px solid var(--color-charcoal);
+	border-bottom: 1px solid rgba(255,255,255,0.12);
+	background-color: rgba(255,255,255,0.04);
 }
 .mobile-nav__sub.is-open { display: block; }
 .mobile-nav__sub a {
 	display: block;
-	padding: 0.625rem 0;
-	font-size: 0.975rem;
-	color: var(--color-silver);
-	border-bottom: 1px solid rgba(255,255,255,0.05);
+	padding: 0.8rem 0;
+	font-size: 1.05rem;
+	color: var(--color-white);
+	border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .mobile-nav__sub a:last-child { border-bottom: none; }
 .mobile-nav__phones {
@@ -721,7 +748,6 @@ body.nav-open { overflow: hidden; }
 	position: relative;
 	z-index: 2;
 	flex-shrink: 0;
-	white-space: nowrap;
 }
 
 .store-card__details { margin-bottom: 1.5rem; }
@@ -1007,6 +1033,13 @@ body.nav-open { overflow: hidden; }
 	cursor: pointer;
 	padding: 0;
 	transition: background-color 0.2s ease, transform 0.2s ease;
+	/* Larger tap target via padding trick */
+	position: relative;
+}
+.reviews__dot::before {
+	content: '';
+	position: absolute;
+	inset: -8px;
 }
 .reviews__dot.is-active {
 	background-color: var(--color-orange);
@@ -1083,7 +1116,7 @@ body.nav-open { overflow: hidden; }
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 38px; height: 38px;
+	width: 44px; height: 44px;
 	background-color: var(--color-charcoal);
 	border-radius: 50%;
 	font-size: 0.875rem;
@@ -1646,8 +1679,9 @@ body.page-template-template-brands {
 }
 .contact-store-card__btn {
 	display: inline-flex;
-	font-size: 0.8125rem;
-	padding: 0.5rem 1.1rem;
+	font-size: 0.9375rem;
+	padding: 0.75rem 1.25rem;
+	min-height: 44px;
 }
 
 /* Form wrapper — centred with max-width */
@@ -1668,7 +1702,7 @@ body.page-template-template-brands {
 
 .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
 .form-group label {
-	font-size: 0.875rem;
+	font-size: 1rem;
 	font-weight: 600;
 	color: var(--color-white);
 }
@@ -1803,13 +1837,20 @@ body.page-template-template-brands {
 	.stores__grid { grid-template-columns: 1fr; }
 	.site-footer__grid { grid-template-columns: 1fr; }
 	.products__grid { grid-template-columns: repeat(2, 1fr); }
-	.brands__grid { gap: 1.25rem 1.5rem; }
-	.brand-logo { width: 180px; height: 90px; padding: 1rem; }
+	.brands__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; justify-items: center; }
+	.brand-logo { width: 100%; max-width: 180px; height: 90px; padding: 1rem; }
 	.hero { min-height: 80vh; }
 	.hero__ctas { flex-direction: column; }
 	.hero__ctas .btn { text-align: center; justify-content: center; }
 	.footer-cta__ctas { flex-direction: column; align-items: center; }
 	.brand-page-header { flex-direction: column; align-items: flex-start; }
+	.trust-bar__inner { gap: 0.5rem 1rem; }
+	.contact-stores { grid-template-columns: 1fr; }
+	.contact-store-card__actions { flex-direction: column; }
+	.contact-store-card__btn { width: 100%; justify-content: center; }
+	.form-group input,
+	.form-group textarea,
+	.form-group select { min-height: 48px; font-size: 1rem; }
 }
 
 @media (max-width: 400px) {
@@ -1917,14 +1958,15 @@ body.page-template-template-brands {
 }
 
 .floating-call__menu {
-	position: absolute;
-	bottom: calc(100% + 10px);
+	position: fixed;
+	bottom: calc(1.5rem + 56px + 12px);
 	left: 0;
-	min-width: 240px;
+	right: 0;
 	background-color: var(--color-charcoal);
 	border: 1px solid rgba(255,255,255,0.08);
 	border-radius: var(--radius);
 	padding: 0.4rem 0;
+	margin: 0 1rem;
 	opacity: 0;
 	visibility: hidden;
 	transform: translateY(8px);

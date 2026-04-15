@@ -194,13 +194,13 @@ function coffsope_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'coffsope_hp_hero', [ 'title' => 'Hero', 'panel' => 'coffsope_hp_panel' ] );
 	$img( 'hp_hero_image',       'coffsope_hp_hero', 'Background image', $u . '/hero/outdoor-power-equipment-store-hero.jpg' );
 	$t(   'hp_hero_headline',    'coffsope_hp_hero', 'Headline', "The Coffs Coast's home for outdoor power equipment." );
-	$t(   'hp_hero_subheadline', 'coffsope_hp_hero', 'Subheadline', 'Two locations, 30 years of expertise, and the brands you trust: STIHL, Honda, COX and more.', 'textarea' );
+	$t(   'hp_hero_subheadline', 'coffsope_hp_hero', 'Subheadline', 'Two locations, 45 years of expertise, and the brands you trust: STIHL, Honda, COX and more.', 'textarea' );
 	$t(   'hp_hero_cta1',        'coffsope_hp_hero', 'Button 1 label', 'View our products' );
 	$t(   'hp_hero_cta2',        'coffsope_hp_hero', 'Button 2 label', 'Find a store' );
 
 	// Trust bar
 	$wp_customize->add_section( 'coffsope_hp_trust', [ 'title' => 'Trust Bar', 'panel' => 'coffsope_hp_panel' ] );
-	$t( 'hp_trust_1', 'coffsope_hp_trust', 'Item 1', '30+ years experience' );
+	$t( 'hp_trust_1', 'coffsope_hp_trust', 'Item 1', '45+ years experience' );
 	$t( 'hp_trust_2', 'coffsope_hp_trust', 'Item 2', 'Authorised STIHL & Honda dealer' );
 	$t( 'hp_trust_3', 'coffsope_hp_trust', 'Item 3', 'Two Coffs Coast locations' );
 	$t( 'hp_trust_4', 'coffsope_hp_trust', 'Item 4', 'On-site workshop & repairs' );
@@ -219,7 +219,7 @@ function coffsope_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'coffsope_hp_brands', [ 'title' => 'Brands Section', 'panel' => 'coffsope_hp_panel' ] );
 	$t( 'hp_brands_label',   'coffsope_hp_brands', 'Section label', 'Our brands' );
 	$t( 'hp_brands_heading', 'coffsope_hp_brands', 'Heading', 'Brands worth trusting.' );
-	$t( 'hp_brands_intro',   'coffsope_hp_brands', 'Intro text', 'As an authorised dealer for STIHL and Honda, we can offer genuine advice, genuine parts and genuine backup when you need it. We also stock COX, Ariens, Gravely, Kress, Greenfield, Stiga, Supaswift and Rato. Quality equipment for every budget and job size.', 'textarea' );
+	$t( 'hp_brands_intro',   'coffsope_hp_brands', 'Intro text', 'As an authorised dealer for STIHL and Honda, we can offer genuine advice, genuine parts and genuine backup when you need it. We also stock COX, Ariens, Gravely, Kress, Greenfield, Supaswift and Wright. Quality equipment for every budget and job size.', 'textarea' );
 
 	// Servicing preview
 	$wp_customize->add_section( 'coffsope_hp_servicing', [ 'title' => 'Servicing Section', 'panel' => 'coffsope_hp_panel' ] );
@@ -275,9 +275,9 @@ function coffsope_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'coffsope_loc_urunga', [ 'title' => 'Urunga Location Page', 'panel' => 'coffsope_loc_panel' ] );
 	$img( 'loc_urunga_hero_image',       'coffsope_loc_urunga', 'Hero background image', $u . '/gallery/outdoor-power-equipment-store-coffs-coast-5.jpg' );
 	$t(   'loc_urunga_h1',               'coffsope_loc_urunga', 'Page heading (H1)', 'Urunga Chainsaw & Mower' );
-	$t(   'loc_urunga_intro',            'coffsope_loc_urunga', 'Intro paragraph', "We've been part of the Urunga community for over 30 years. Whether you're after a new chainsaw, a ride-on mower for your acreage, or just need your brushcutter serviced, our team is here to help, with honest advice and no pressure.", 'textarea' );
+	$t(   'loc_urunga_intro',            'coffsope_loc_urunga', 'Intro paragraph', "We've been part of the Urunga community for over 45 years. Whether you're after a new chainsaw, a ride-on mower for your acreage, or just need your brushcutter serviced, our team is here to help, with honest advice and no pressure.", 'textarea' );
 	$t(   'loc_urunga_stock_heading',    'coffsope_loc_urunga', 'Stock — heading', 'What we stock' );
-	$t(   'loc_urunga_stock_body',       'coffsope_loc_urunga', 'Stock — body', "We carry a full range of outdoor power equipment from the brands that work: STIHL, Honda, COX, Kress, Greenfield, Stiga and more. Whether it's for the home garden or a working rural property, we'll help you find the right tool for the job.", 'textarea' );
+	$t(   'loc_urunga_stock_body',       'coffsope_loc_urunga', 'Stock — body', "We carry a full range of outdoor power equipment from the brands that work: STIHL, Honda, COX, Kress, Greenfield and more. Whether it's for the home garden or a working rural property, we'll help you find the right tool for the job.", 'textarea' );
 	$t(   'loc_urunga_workshop_heading', 'coffsope_loc_urunga', 'Workshop — heading', 'Workshop & repairs' );
 	$t(   'loc_urunga_workshop_body',    'coffsope_loc_urunga', 'Workshop — body', 'Our Urunga store has a fully equipped workshop on site. We service and repair most makes and models: mowers, chainsaws, brushcutters, generators and pumps. No booking needed for a basic drop-in diagnostic.', 'textarea' );
 	$t(   'loc_urunga_also_serving',     'coffsope_loc_urunga', 'Also serving', 'Bellingen, Nambucca Heads, Macksville, Sawtell and surrounding Mid North Coast communities.' );
@@ -286,7 +286,7 @@ function coffsope_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'coffsope_loc_coffs', [ 'title' => 'Coffs Harbour Location Page', 'panel' => 'coffsope_loc_panel' ] );
 	$img( 'loc_coffs_hero_image',       'coffsope_loc_coffs', 'Hero background image', $u . '/gallery/stihl-authorised-dealer-coffs-coast-2.jpg' );
 	$t(   'loc_coffs_h1',               'coffsope_loc_coffs', 'Page heading (H1)', 'Coffs Harbour Outdoor Power Equipment' );
-	$t(   'loc_coffs_intro',            'coffsope_loc_coffs', 'Intro paragraph', "Located at Sapphire Beach, our Coffs Harbour store brings the same expertise and product range you'd expect from over 30 years in the industry. We're your local authorised STIHL and Honda dealer, and we also stock COX, Kress, Greenfield, Stiga and more.", 'textarea' );
+	$t(   'loc_coffs_intro',            'coffsope_loc_coffs', 'Intro paragraph', "Located at Sapphire Beach, our Coffs Harbour store brings the same expertise and product range you'd expect from over 45 years in the industry. We're your local authorised STIHL and Honda dealer, and we also stock COX, Kress, Greenfield and more.", 'textarea' );
 	$t(   'loc_coffs_stock_heading',    'coffsope_loc_coffs', 'Stock — heading', 'What we stock' );
 	$t(   'loc_coffs_stock_body',       'coffsope_loc_coffs', 'Stock — body', 'From push mowers and brushcutters to chainsaws and generators. We carry the full range. As an authorised STIHL and Honda dealer, we can also assist with genuine parts and warranty support.', 'textarea' );
 	$t(   'loc_coffs_workshop_heading', 'coffsope_loc_coffs', 'Workshop — heading', 'Workshop & repairs' );
@@ -364,9 +364,8 @@ function coffsope_customize_register( $wp_customize ) {
 	$img( 'brand_logo_honda',   'coffsope_brand_logos', 'Honda logo',   $u . '/brands/honda-power-equipment-logo.png' );
 	$img( 'brand_logo_cox',     'coffsope_brand_logos', 'COX logo',     $u . '/brands/cox-logo.png' );
 
-	$img( 'brand_logo_stiga',     'coffsope_brand_logos', 'Stiga logo',     $u . '/brands/stiga-logo.png' );
 	$img( 'brand_logo_supaswift', 'coffsope_brand_logos', 'Supaswift logo', $u . '/brands/supaswift-logo.webp' );
-	$img( 'brand_logo_rato',      'coffsope_brand_logos', 'Rato logo',      $u . '/brands/rato-logo.png' );
+	$img( 'brand_logo_wright',    'coffsope_brand_logos', 'Wright logo',    $u . '/brands/wright-logo.png' );
 }
 add_action( 'customize_register', 'coffsope_customize_register' );
 
