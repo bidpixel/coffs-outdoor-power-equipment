@@ -26,7 +26,7 @@ function coffs_product_img( $file ) {
 				<span class="product-card__label">Ride-on mowers</span>
 			</a>
 
-			<a class="product-card" href="<?php echo esc_url( home_url( '/zero-turn-mowers' ) ); ?>" style="background-image: url('<?php echo esc_url( coffs_product_img( 'zero-turn-mowers-gravely-coffs-coast.jpg' ) ); ?>')">
+			<a class="product-card" href="<?php echo esc_url( home_url( '/zero-turn-mowers' ) ); ?>" style="background-image: url('<?php echo esc_url( coffs_product_img( 'zero-turn-mowers-coffs-coast.webp' ) ); ?>')">
 				<span class="product-card__label">Zero turn mowers</span>
 			</a>
 

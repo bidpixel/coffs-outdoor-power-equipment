@@ -252,6 +252,10 @@ $section_image_fits = [
 		1 => 'contain',
 		2 => 'contain',
 	],
+	'generators' => [
+		1 => 'contain',
+		2 => 'contain',
+	],
 ];
 
 // Brand display names and logo paths
@@ -305,10 +309,10 @@ $category_image_files = [
 	'chainsaws'          => [ 'chainsaws-coffs-coast.jpg', 'stihl-chainsaw-coffs-coast-1.jpg', 'stihl-chainsaw-coffs-coast-2.jpg' ],
 	'lawn-mowers'        => [ 'lawn-mowers-coffs-coast.jpg', 'lawn-mower-coffs-coast-1.jpg', 'cox-46-lawn-mower.webp' ],
 	'ride-on-mowers'     => [ 'greenfield_products_page.jpg', 'ride-on-mowers-coffs-coast.webp', 'IMG_3249.webp' ],
-	'zero-turn-mowers'   => [ 'ariens-zero-turn-mower-banner.webp', 'zero-turn-mower-lifestyle-1.jpg', 'zero-turn-mowers-gravely-coffs-coast.jpg' ],
+	'zero-turn-mowers'   => [ 'zero-turn-mowers-coffs-coast.webp', 'zero-turn-mower-lifestyle-1.jpg', 'zero-turn-mowers-gravely-coffs-coast.jpg' ],
 	'robot-mowers'       => [ 'robot-mowers-kress-coffs-coast.jpg', 'kress-kr173e-robot-mower.webp', 'kress-kr174-robot-mower.webp' ],
 	'brushcutters'       => [ 'honda-brushcutter-umk435.jpg', 'brushcutter-coffs-coast-1.jpg', 'stihl-fsa86-battery-brushcutter.webp' ],
-	'generators'         => [ 'generators-coffs-coast.jpg', 'honda-eu22i-generator-key-features.jpg', 'honda-generator-coffs-coast-1.jpg' ],
+	'generators'         => [ 'honda-eu22i-generator-key-features.jpg', 'cox-inverter-generator-cpgi3000.webp', 'cox-generator-cpg3700e.webp' ],
 	'pressure-cleaners'  => [ 'pressure-cleaners-coffs-coast.jpg', 'pressure-cleaner-coffs-coast-1.jpg', 'stihl-rb400-petrol-pressure-cleaner.jpg' ],
 	'water-pumps'        => [ 'water-pump-lifestyle.jpg', 'cox-transfer-pump-cpt15.webp', 'cox-transfer-pump-cpt30.webp' ],
 	'garden-power-tools' => [ 'garden-power-tools-hedge-trimmer-coffs-coast.jpg', 'garden-power-tool-1.jpg', 'garden-power-tools-coffs-coast-2.jpg' ],
