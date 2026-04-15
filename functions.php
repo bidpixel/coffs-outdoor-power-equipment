@@ -62,18 +62,23 @@ function coffsope_contact_form_handler() {
 		wp_send_json_error( [ 'message' => 'Please enter a valid email address.' ] );
 	}
 
-	$to      = 'sales@coffsope.com.au';
-	$subject = 'Website enquiry: ' . $store;
-	$body    = "Name: {$name}\nPhone: {$phone}\nEmail: {$email}\nStore: {$store}\n\nMessage:\n{$message}";
-	$headers = [ 'Content-Type: text/plain; charset=UTF-8', "Reply-To: {$email}" ];
+	$response = wp_remote_post( MAKE_WEBHOOK_URL, [
+		'headers' => [ 'Content-Type' => 'application/json' ],
+		'body'    => wp_json_encode( [
+			'name'    => $name,
+			'phone'   => $phone,
+			'email'   => $email,
+			'store'   => $store,
+			'message' => $message,
+		] ),
+		'timeout' => 10,
+	] );
 
-	$sent = wp_mail( $to, $subject, $body, $headers );
-
-	if ( $sent ) {
-		wp_send_json_success( [ 'message' => "Thanks for getting in touch. We'll get back to you shortly." ] );
-	} else {
+	if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) >= 400 ) {
 		wp_send_json_error( [ 'message' => 'Sorry, your message could not be sent. Please call us directly.' ] );
 	}
+
+	wp_send_json_success( [ 'message' => "Thanks for getting in touch. We'll get back to you shortly." ] );
 }
 add_action( 'wp_ajax_coffsope_contact', 'coffsope_contact_form_handler' );
 add_action( 'wp_ajax_nopriv_coffsope_contact', 'coffsope_contact_form_handler' );
