@@ -11,7 +11,7 @@ $hero_image = get_theme_mod( 'hp_hero_image', get_template_directory_uri() . '/a
 			muted
 			loop
 			playsinline
-			preload="auto"
+			preload="metadata"
 			poster="<?php echo esc_url( $hero_image ); ?>"
 		>
 			<source src="<?php echo esc_url( $hero_video ); ?>" type="video/mp4">

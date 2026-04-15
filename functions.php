@@ -24,16 +24,9 @@ add_action( 'after_setup_theme', 'coffsope_setup' );
 
 function coffsope_enqueue_assets() {
 	wp_enqueue_style(
-		'coffsope-fonts',
-		'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600&display=swap',
-		[],
-		null
-	);
-
-	wp_enqueue_style(
 		'coffsope-main',
 		COFFSOPE_URI . '/assets/css/main.css',
-		[ 'coffsope-fonts' ],
+		[],
 		COFFSOPE_VERSION
 	);
 
@@ -84,6 +77,13 @@ function coffsope_contact_form_handler() {
 }
 add_action( 'wp_ajax_coffsope_contact', 'coffsope_contact_form_handler' );
 add_action( 'wp_ajax_nopriv_coffsope_contact', 'coffsope_contact_form_handler' );
+
+function coffsope_async_fonts() {
+	$font_url = 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600&display=swap';
+	echo '<link rel="preload" as="style" href="' . esc_url( $font_url ) . '" onload="this.onload=null;this.rel=\'stylesheet\'">' . "\n";
+	echo '<noscript><link rel="stylesheet" href="' . esc_url( $font_url ) . '"></noscript>' . "\n";
+}
+add_action( 'wp_head', 'coffsope_async_fonts', 1 );
 
 function coffsope_add_preconnect( $hints, $relation_type ) {
 	if ( 'preconnect' === $relation_type ) {
@@ -274,6 +274,7 @@ function coffsope_customize_register( $wp_customize ) {
 	// Urunga location
 	$wp_customize->add_section( 'coffsope_loc_urunga', [ 'title' => 'Urunga Location Page', 'panel' => 'coffsope_loc_panel' ] );
 	$img( 'loc_urunga_hero_image',       'coffsope_loc_urunga', 'Hero background image', $u . '/gallery/outdoor-power-equipment-store-coffs-coast-5.jpg' );
+	$img( 'loc_urunga_store_image',      'coffsope_loc_urunga', 'Store front image',      $u . '/stores/urunga-chainsaw-mower-store-front.jpg' );
 	$t(   'loc_urunga_h1',               'coffsope_loc_urunga', 'Page heading (H1)', 'Urunga Chainsaw & Mower' );
 	$t(   'loc_urunga_intro',            'coffsope_loc_urunga', 'Intro paragraph', "We've been part of the Urunga community for over 45 years. Whether you're after a new chainsaw, a ride-on mower for your acreage, or just need your brushcutter serviced, our team is here to help, with honest advice and no pressure.", 'textarea' );
 	$t(   'loc_urunga_stock_heading',    'coffsope_loc_urunga', 'Stock — heading', 'What we stock' );
@@ -285,6 +286,7 @@ function coffsope_customize_register( $wp_customize ) {
 	// Coffs Harbour location
 	$wp_customize->add_section( 'coffsope_loc_coffs', [ 'title' => 'Coffs Harbour Location Page', 'panel' => 'coffsope_loc_panel' ] );
 	$img( 'loc_coffs_hero_image',       'coffsope_loc_coffs', 'Hero background image', $u . '/gallery/stihl-authorised-dealer-coffs-coast-2.jpg' );
+	$img( 'loc_coffs_store_image',      'coffsope_loc_coffs', 'Store front image',      $u . '/stores/coffs-harbour-outdoor-power-equipment-store-front.jpg' );
 	$t(   'loc_coffs_h1',               'coffsope_loc_coffs', 'Page heading (H1)', 'Coffs Harbour Outdoor Power Equipment' );
 	$t(   'loc_coffs_intro',            'coffsope_loc_coffs', 'Intro paragraph', "Located at Sapphire Beach, our Coffs Harbour store brings the same expertise and product range you'd expect from over 45 years in the industry. We're your local authorised STIHL and Honda dealer, and we also stock COX, Kress, Greenfield and more.", 'textarea' );
 	$t(   'loc_coffs_stock_heading',    'coffsope_loc_coffs', 'Stock — heading', 'What we stock' );
@@ -356,16 +358,22 @@ function coffsope_customize_register( $wp_customize ) {
 	$img( 'cat_img_brushcutters',      'coffsope_cat_images', 'Brushcutters',      $u . '/products/brushcutters-stihl-coffs-coast.webp' );
 	$img( 'cat_img_generators',        'coffsope_cat_images', 'Generators',        $u . '/products/generators-coffs-coast.jpg' );
 	$img( 'cat_img_pressure_cleaners', 'coffsope_cat_images', 'Pressure cleaners', $u . '/products/pressure-cleaners-coffs-coast.jpg' );
-	$img( 'cat_img_water_pumps',       'coffsope_cat_images', 'Water pumps',       $u . '/products/water-pump-coffs-coast-1.jpg' );
+	$img( 'cat_img_water_pumps',         'coffsope_cat_images', 'Water pumps',         $u . '/products/water-pump-coffs-coast-1.jpg' );
+	$img( 'cat_img_garden_power_tools',  'coffsope_cat_images', 'Garden power tools',  $u . '/products/garden-power-tools-hedge-trimmer-coffs-coast.jpg' );
+	$img( 'cat_img_battery_electric',    'coffsope_cat_images', 'Battery & electric',  $u . '/products/battery-electric-outdoor-power-equipment-coffs-coast.jpg' );
 
 	// Brand logos
 	$wp_customize->add_section( 'coffsope_brand_logos', [ 'title' => 'Brand Logos', 'panel' => 'coffsope_prod_panel' ] );
-	$img( 'brand_logo_stihl',   'coffsope_brand_logos', 'STIHL logo',   $u . '/brands/stihl-logo.png' );
-	$img( 'brand_logo_honda',   'coffsope_brand_logos', 'Honda logo',   $u . '/brands/honda-power-equipment-logo.png' );
-	$img( 'brand_logo_cox',     'coffsope_brand_logos', 'COX logo',     $u . '/brands/cox-logo.png' );
-
-	$img( 'brand_logo_supaswift', 'coffsope_brand_logos', 'Supaswift logo', $u . '/brands/supaswift-logo.webp' );
-	$img( 'brand_logo_wright',    'coffsope_brand_logos', 'Wright logo',    $u . '/brands/wright-logo.png' );
+	$img( 'brand_logo_stihl',      'coffsope_brand_logos', 'STIHL logo',      $u . '/brands/stihl-logo.png' );
+	$img( 'brand_logo_honda',      'coffsope_brand_logos', 'Honda logo',      $u . '/brands/honda-power-equipment-logo.png' );
+	$img( 'brand_logo_cox',        'coffsope_brand_logos', 'COX logo',        $u . '/brands/cox-logo.png' );
+	$img( 'brand_logo_ariens',     'coffsope_brand_logos', 'Ariens logo',     $u . '/brands/ariens-logo.avif' );
+	$img( 'brand_logo_gravely',    'coffsope_brand_logos', 'Gravely logo',    $u . '/brands/gravely-logo.webp' );
+	$img( 'brand_logo_kress',      'coffsope_brand_logos', 'Kress logo',      $u . '/brands/kress-logo.png' );
+	$img( 'brand_logo_greenfield', 'coffsope_brand_logos', 'Greenfield logo', $u . '/brands/greenfield-logo.png' );
+	$img( 'brand_logo_spika',      'coffsope_brand_logos', 'Spika logo',      $u . '/brands/spika-logo.png' );
+	$img( 'brand_logo_supaswift',  'coffsope_brand_logos', 'Supaswift logo',  $u . '/brands/supaswift-logo.webp' );
+	$img( 'brand_logo_wright',     'coffsope_brand_logos', 'Wright logo',     $u . '/brands/wright-logo.png' );
 }
 add_action( 'customize_register', 'coffsope_customize_register' );
 

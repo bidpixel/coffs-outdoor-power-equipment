@@ -788,9 +788,6 @@ body.nav-open { overflow: hidden; }
 	min-height: 220px;
 	padding: 1.25rem 1rem;
 	background-color: var(--color-charcoal);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 	border-radius: 8px;
 	text-align: center;
 	transition: box-shadow var(--transition), transform 0.25s ease;
@@ -798,6 +795,14 @@ body.nav-open { overflow: hidden; }
 	color: var(--color-white);
 	position: relative;
 	overflow: hidden;
+}
+.product-card__img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
 }
 .product-card::before {
 	content: '';
