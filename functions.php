@@ -62,7 +62,13 @@ function coffsope_contact_form_handler() {
 		wp_send_json_error( [ 'message' => 'Please enter a valid email address.' ] );
 	}
 
-	$response = wp_remote_post( MAKE_WEBHOOK_URL, [
+	$webhook = get_theme_mod( 'coffsope_make_webhook', '' );
+
+	if ( empty( $webhook ) ) {
+		wp_send_json_error( [ 'message' => 'Sorry, your message could not be sent. Please call us directly.' ] );
+	}
+
+	$response = wp_remote_post( $webhook, [
 		'headers' => [ 'Content-Type' => 'application/json' ],
 		'body'    => wp_json_encode( [
 			'name'    => $name,
@@ -74,15 +80,8 @@ function coffsope_contact_form_handler() {
 		'timeout' => 10,
 	] );
 
-	if ( is_wp_error( $response ) ) {
-		wp_send_json_error( [ 'message' => 'WP_Error: ' . $response->get_error_message() ] );
-	}
-
-	$code = wp_remote_retrieve_response_code( $response );
-	$body = wp_remote_retrieve_body( $response );
-
-	if ( $code >= 400 ) {
-		wp_send_json_error( [ 'message' => "HTTP {$code}: {$body}" ] );
+	if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) >= 400 ) {
+		wp_send_json_error( [ 'message' => 'Sorry, your message could not be sent. Please call us directly.' ] );
 	}
 
 	wp_send_json_success( [ 'message' => "Thanks for getting in touch. We'll get back to you shortly." ] );
@@ -185,6 +184,21 @@ function coffsope_customize_register( $wp_customize ) {
 		'label'   => 'Email address',
 		'section' => 'coffsope_coffs',
 		'type'    => 'email',
+	] );
+
+	$wp_customize->add_section( 'coffsope_integrations', [
+		'title' => 'Integrations',
+		'panel' => 'coffsope_panel',
+	] );
+	$wp_customize->add_setting( 'coffsope_make_webhook', [
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	] );
+	$wp_customize->add_control( 'coffsope_make_webhook', [
+		'label'       => 'Make webhook URL',
+		'description' => 'Paste your Make webhook URL here. Stored in the database — never in theme files.',
+		'section'     => 'coffsope_integrations',
+		'type'        => 'url',
 	] );
 
 	$wp_customize->add_section( 'coffsope_social', [
