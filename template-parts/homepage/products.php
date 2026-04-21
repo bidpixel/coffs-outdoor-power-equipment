@@ -18,7 +18,7 @@ function coffs_product_img( $file ) {
 				<span class="product-card__label">Chainsaws</span>
 			</a>
 
-			<a class="product-card" href="<?php echo esc_url( home_url( '/lawn-mowers' ) ); ?>" style="background-image: url('<?php echo esc_url( coffs_product_img( 'lawn-mowers-coffs-coast.jpg' ) ); ?>')">
+			<a class="product-card" href="<?php echo esc_url( home_url( '/lawn-mowers' ) ); ?>" style="background-image: url('<?php echo esc_url( coffs_product_img( 'honda-hru216-self-propelled-mower-coffs-coast.jpg' ) ); ?>')">
 				<span class="product-card__label">Lawn mowers</span>
 			</a>
 
@@ -38,7 +38,7 @@ function coffs_product_img( $file ) {
 				<span class="product-card__label">Brushcutters</span>
 			</a>
 
-			<a class="product-card" href="<?php echo esc_url( home_url( '/generators' ) ); ?>" style="background-image: url('<?php echo esc_url( coffs_product_img( 'generators-coffs-coast.jpg' ) ); ?>')">
+			<a class="product-card" href="<?php echo esc_url( home_url( '/generators' ) ); ?>" style="background-image: url('<?php echo esc_url( coffs_product_img( 'honda-eu22i-generator-coffs-coast.jpg' ) ); ?>')">
 				<span class="product-card__label">Generators</span>
 			</a>
 
@@ -52,6 +52,14 @@ function coffs_product_img( $file ) {
 
 			<a class="product-card" href="<?php echo esc_url( home_url( '/battery-electric' ) ); ?>" style="background-image: url('<?php echo esc_url( coffs_product_img( 'battery-electric-outdoor-power-equipment-coffs-coast.jpg' ) ); ?>')">
 				<span class="product-card__label">Battery &amp; electric</span>
+			</a>
+
+			<a class="product-card" href="<?php echo esc_url( home_url( '/water-pumps' ) ); ?>" style="background-image: url('<?php echo esc_url( coffs_product_img( 'water-pump-lifestyle.jpg' ) ); ?>')">
+				<span class="product-card__label">Water pumps</span>
+			</a>
+
+			<a class="product-card" href="<?php echo esc_url( home_url( '/compact-tractors' ) ); ?>" style="background-image: url('<?php echo esc_url( coffs_product_img( 'compact-tractors-coffs-coast.jpg' ) ); ?>')">
+				<span class="product-card__label">Compact tractors</span>
 			</a>
 
 		</div>

@@ -90,6 +90,14 @@ $brands = [
 		'categories' => [ 'Push mowers' ],
 		'url'        => 'https://supaswift.com.au/',
 	],
+	'tym' => [
+		'name'       => 'TYM Tractors',
+		'logo'       => get_theme_mod( 'brand_logo_tym', $theme_img . '/brands/tym-tractors-logo.png' ),
+		'image'      => $theme_img . '/products/compact-tractors-coffs-coast.jpg',
+		'blurb'      => "TYM is a South Korean manufacturer with decades of experience building quality tractors for farmers, landowners and contractors. The Australian range covers sub-compact garden tractors through to utility models, with hydrostatic transmission, 4WD and front-end loader capability across the compact range. As an authorised TYM dealer on the Coffs Coast, we stock models suitable for everything from large residential blocks to working hobby farms, backed by local parts and service support.",
+		'categories' => [ 'Sub-compact tractors (19hp)', 'Compact tractors (24–28hp)', 'Utility tractors (39–100hp)', 'Front-end loaders', 'Mid-mount mower decks', 'Tractor loader backhoe (TLB)' ],
+		'url'        => 'https://www.tym-tractors.com.au/',
+	],
 ];
 ?>
 

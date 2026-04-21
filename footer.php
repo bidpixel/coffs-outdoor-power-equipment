@@ -31,7 +31,7 @@
 				<div class="site-footer__col">
 					<h3 class="site-footer__col-heading">Urunga store</h3>
 					<div class="footer-store-detail">
-						<span>Lot 1/2 Marina Crescent, Urunga NSW 2455</span>
+						<span>Lot 1/2 Marina Crescent,<br>Urunga NSW 2455</span>
 						<a href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>"><?php echo esc_html( coffsope_phone('urunga') ); ?></a>
 						<a href="mailto:enquiries@urungachainsawandmower.com.au">enquiries@urungachainsawandmower.com.au</a>
 						<span>Mon–Fri: 8:30am–5:00pm</span>
@@ -43,11 +43,12 @@
 				<div class="site-footer__col">
 					<h3 class="site-footer__col-heading">Coffs Harbour store</h3>
 					<div class="footer-store-detail">
-						<span>16 Wakelands Road, Sapphire Beach NSW 2450</span>
+						<span>16 Wakelands Road,<br>Sapphire Beach NSW 2450</span>
 						<a href="<?php echo esc_attr( coffsope_phone_link('coffs') ); ?>"><?php echo esc_html( coffsope_phone('coffs') ); ?></a>
-						<span>Tue–Fri: 8:30am–4:30pm</span>
+						<a href="mailto:<?php echo esc_attr( coffsope_email() ); ?>"><?php echo esc_html( coffsope_email() ); ?></a>
+						<span>Mon–Fri: 8:30am–4:00pm</span>
 						<span>Sat: 9:00am–12:00pm</span>
-						<span>Mon &amp; Sun: Closed</span>
+						<span>Sun: Closed</span>
 					</div>
 					<a href="https://maps.app.goo.gl/2i7si1rnu49NJaXr9" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.875rem;padding:0.6rem 1.25rem;">Get directions</a>
 				</div>

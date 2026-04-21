@@ -387,6 +387,7 @@ function coffsope_customize_register( $wp_customize ) {
 	$img( 'cat_img_water_pumps',         'coffsope_cat_images', 'Water pumps',         $u . '/products/water-pump-coffs-coast-1.jpg' );
 	$img( 'cat_img_garden_power_tools',  'coffsope_cat_images', 'Garden power tools',  $u . '/products/garden-power-tools-hedge-trimmer-coffs-coast.jpg' );
 	$img( 'cat_img_battery_electric',    'coffsope_cat_images', 'Battery & electric',  $u . '/products/battery-electric-outdoor-power-equipment-coffs-coast.jpg' );
+	$img( 'cat_img_compact_tractors',    'coffsope_cat_images', 'Compact tractors',    $u . '/products/compact-tractors-coffs-coast.jpg' );
 
 	// Brand logos
 	$wp_customize->add_section( 'coffsope_brand_logos', [ 'title' => 'Brand Logos', 'panel' => 'coffsope_prod_panel' ] );
@@ -400,6 +401,7 @@ function coffsope_customize_register( $wp_customize ) {
 	$img( 'brand_logo_spika',      'coffsope_brand_logos', 'Spika logo',      $u . '/brands/spika-logo.png' );
 	$img( 'brand_logo_supaswift',  'coffsope_brand_logos', 'Supaswift logo',  $u . '/brands/supaswift-logo.webp' );
 	$img( 'brand_logo_wright',     'coffsope_brand_logos', 'Wright logo',     $u . '/brands/wright-logo.png' );
+	$img( 'brand_logo_tym',        'coffsope_brand_logos', 'TYM Tractors logo', $u . '/brands/tym-tractors-logo.png' );
 }
 add_action( 'customize_register', 'coffsope_customize_register' );
 

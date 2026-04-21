@@ -20,6 +20,7 @@ $category_mod_keys = [
 	'water-pumps'        => 'cat_img_water_pumps',
 	'garden-power-tools' => 'cat_img_garden_power_tools',
 	'battery-electric'   => 'cat_img_battery_electric',
+	'compact-tractors'   => 'cat_img_compact_tractors',
 ];
 
 $category_image_defaults = [
@@ -34,6 +35,7 @@ $category_image_defaults = [
 	'water-pumps'        => $theme_img . '/products/water-pump-coffs-coast-1.jpg',
 	'garden-power-tools' => $theme_img . '/products/garden-power-tools-hedge-trimmer-coffs-coast.jpg',
 	'battery-electric'   => $theme_img . '/products/battery-electric-outdoor-power-equipment-coffs-coast.jpg',
+	'compact-tractors'   => $theme_img . '/products/compact-tractors-coffs-coast.jpg',
 ];
 
 // Content sections: up to 3 per category, each paired with a category image
@@ -178,6 +180,20 @@ $category_sections = [
 			'body'    => 'Come in to our Urunga or Coffs Harbour store and we\'ll help you work out which tools suit your property, your budget and how regularly you\'re using them. We can advise on whether a multi-tool system or individual tools makes more sense for your situation, and we handle servicing and genuine parts for everything we sell.',
 		],
 	],
+	'compact-tractors' => [
+		[
+			'heading' => 'From ride-on to tractor: when the job demands more',
+			'body'    => "If you're managing acreage, running a hobby farm or taking on serious earthworks, there comes a point where a ride-on mower just isn't the right tool. A compact tractor opens up a whole new range of capability — front-end loader work, mowing large areas, towing, post-hole digging and more. The TYM range starts at sub-compact garden tractors from 19hp and scales up through compact and utility models to suit everything from a few acres to a serious working farm.",
+		],
+		[
+			'heading' => 'TYM compact tractors: quality at the right price',
+			'body'    => "TYM is a South Korean manufacturer with a strong reputation for producing quality tractors at competitive prices. The Australian range covers sub-compact models from 19hp through to utility tractors up to 100hp. All compact models come with 4WD and hydrostatic transmission as standard, making them easy to operate for property owners stepping up from a ride-on mower. Available with front-end loader configurations, mid-mount mower decks, and a range of rear implements.",
+		],
+		[
+			'heading' => "We're your local TYM dealer on the Coffs Coast",
+			'body'    => "We stock TYM compact tractors at our Urunga and Coffs Harbour locations. Our team can walk you through the range and help you match the right model to your property, land type and what you need to get done with it. Whether you're after a versatile sub-compact garden tractor or a fully equipped utility model with front-end loader, come in and have a conversation with us first.",
+		],
+	],
 	'battery-electric' => [
 		[
 			'heading' => 'Battery tools that match petrol',
@@ -207,6 +223,7 @@ $category_subheadings = [
 	'water-pumps'        => 'COX water pumps for irrigation, drainage and water transfer on the Mid North Coast.',
 	'garden-power-tools' => 'STIHL, Honda and Kress garden power tools: hedge trimmers, blowers, pole saws and more.',
 	'battery-electric'   => 'Battery outdoor power equipment on the Coffs Coast: STIHL and Kress systems in stock.',
+	'compact-tractors'   => 'TYM compact tractors on the Coffs Coast. Sub-compact to utility models, 4WD HST, front-end loader options.',
 ];
 
 // What types / variations we stock per category
@@ -222,6 +239,7 @@ $category_variations = [
 	'water-pumps'        => [ 'Centrifugal pumps', 'Trash pumps', 'Fire-fighting pumps', 'Transfer pumps' ],
 	'garden-power-tools' => [ 'Hedge trimmers', 'Blowers & vacs', 'Pole saws', 'Tillers & cultivators', 'Edgers', 'Multi-tool systems' ],
 	'battery-electric'   => [ 'Battery chainsaws', 'Battery mowers', 'Battery brushcutters', 'Battery blowers', 'Battery hedge trimmers', 'Robotic mowers' ],
+	'compact-tractors'   => [ 'Sub-compact tractors (19hp)', 'Compact tractors (24–28hp)', 'Utility tractors (39–100hp)', 'Front-end loaders (FEL)', 'Mid-mount mower decks', 'Tractor loader backhoe (TLB)' ],
 ];
 
 // Which brands we stock per category (matched to brand page slugs)
@@ -237,6 +255,7 @@ $category_brands = [
 	'water-pumps'        => [ 'cox' ],
 	'garden-power-tools' => [ 'stihl', 'honda', 'kress' ],
 	'battery-electric'   => [ 'stihl', 'kress' ],
+	'compact-tractors'   => [ 'tym' ],
 ];
 
 // Override object-position for specific section images per category
@@ -270,6 +289,7 @@ $brand_logo_defaults = [
 	'spika'      => $theme_img . '/brands/spika-logo.png',
 	'supaswift'  => $theme_img . '/brands/supaswift-logo.webp',
 	'wright'     => $theme_img . '/brands/wright-logo.png',
+	'tym'        => $theme_img . '/brands/tym-tractors-logo.png',
 ];
 
 $brand_logo_mod_keys = [
@@ -283,6 +303,7 @@ $brand_logo_mod_keys = [
 	'spika'      => 'brand_logo_spika',
 	'supaswift'  => 'brand_logo_supaswift',
 	'wright'     => 'brand_logo_wright',
+	'tym'        => 'brand_logo_tym',
 ];
 
 $brand_display_names = [
@@ -296,6 +317,7 @@ $brand_display_names = [
 	'spika'      => 'Spika',
 	'supaswift'  => 'Supaswift',
 	'wright'     => 'Wright ZTR',
+	'tym'        => 'TYM Tractors',
 ];
 
 $slug        = get_post_field( 'post_name', get_queried_object_id() );
@@ -307,7 +329,7 @@ $subheading  = $category_subheadings[ $slug ] ?? '';
 // Static per-category image lists (3 section images each, hero = index 0)
 $category_image_files = [
 	'chainsaws'          => [ 'chainsaws-coffs-coast.jpg', 'stihl-chainsaw-coffs-coast-1.jpg', 'stihl-chainsaw-coffs-coast-2.jpg' ],
-	'lawn-mowers'        => [ 'lawn-mowers-coffs-coast.jpg', 'lawn-mower-coffs-coast-1.jpg', 'cox-46-lawn-mower.webp' ],
+	'lawn-mowers'        => [ 'honda-hru216-self-propelled-mower-coffs-coast.jpg', 'lawn-mower-coffs-coast-1.jpg', 'cox-46-lawn-mower.webp' ],
 	'ride-on-mowers'     => [ 'greenfield_products_page.jpg', 'ride-on-mowers-coffs-coast.webp', 'IMG_3249.webp' ],
 	'zero-turn-mowers'   => [ 'zero-turn-mowers-coffs-coast.webp', 'zero-turn-mower-lifestyle-1.jpg', 'zero-turn-mowers-gravely-coffs-coast.jpg' ],
 	'robot-mowers'       => [ 'robot-mowers-kress-coffs-coast.jpg', 'kress-kr173e-robot-mower.webp', 'kress-kr174-robot-mower.webp' ],
@@ -317,6 +339,7 @@ $category_image_files = [
 	'water-pumps'        => [ 'water-pump-lifestyle.jpg', 'cox-transfer-pump-cpt15.webp', 'cox-transfer-pump-cpt30.webp' ],
 	'garden-power-tools' => [ 'garden-power-tools-hedge-trimmer-coffs-coast.jpg', 'garden-power-tool-1.jpg', 'garden-power-tools-coffs-coast-2.jpg' ],
 	'battery-electric'   => [ 'battery-electric-outdoor-power-equipment-coffs-coast.jpg', 'battery-powered-outdoor-equipment-2.jpg', 'battery-electric-equipment-1.jpg' ],
+	'compact-tractors'   => [ 'compact-tractors-coffs-coast.jpg', 'tym-ts25-compact-tractor-mower-deck.jpg', 'tym-ts25-compact-tractor-bucket.jpg' ],
 ];
 $section_images = array_map(
 	function( $f ) use ( $theme_img ) { return $theme_img . '/products/' . $f; },

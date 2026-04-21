@@ -10,6 +10,7 @@ $logo_greenfield  = get_theme_mod( 'brand_logo_greenfield',  $theme_img . 'green
 $logo_spika       = get_theme_mod( 'brand_logo_spika',       $theme_img . 'spika-logo.png' );
 $logo_supaswift   = get_theme_mod( 'brand_logo_supaswift',   $theme_img . 'supaswift-logo.webp' );
 $logo_wright      = get_theme_mod( 'brand_logo_wright',      $theme_img . 'wright-logo.png' );
+$logo_tym         = get_theme_mod( 'brand_logo_tym',         $theme_img . 'tym-tractors-logo.png' );
 ?>
 
 <section class="brands section-pad">
@@ -100,6 +101,14 @@ $logo_wright      = get_theme_mod( 'brand_logo_wright',      $theme_img . 'wrigh
 					<img src="<?php echo esc_url( $logo_wright ); ?>" alt="Wright" loading="lazy">
 				<?php else : ?>
 					<span style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-white);letter-spacing:0.05em;">WRIGHT</span>
+				<?php endif; ?>
+			</a>
+
+			<a class="brand-logo" href="<?php echo esc_url( home_url( '/brands#tym' ) ); ?>" aria-label="TYM Tractors: view products">
+				<?php if ( $logo_tym ) : ?>
+					<img src="<?php echo esc_url( $logo_tym ); ?>" alt="TYM Tractors" loading="lazy">
+				<?php else : ?>
+					<span style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--color-white);letter-spacing:0.05em;">TYM</span>
 				<?php endif; ?>
 			</a>
 

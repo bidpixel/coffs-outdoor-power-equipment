@@ -58,7 +58,7 @@ get_header();
 						<p>16 Wakelands Road, Sapphire Beach NSW 2450</p>
 						<p>Phone: <a href="<?php echo esc_attr( coffsope_phone_link('coffs') ); ?>"><?php echo esc_html( coffsope_phone('coffs') ); ?></a></p>
 						<p>Email: <a href="mailto:<?php echo esc_attr( coffsope_email() ); ?>"><?php echo esc_html( coffsope_email() ); ?></a></p>
-						<p>Tue–Fri 8:30am–4:30pm &nbsp;|&nbsp; Sat 9:00am–12:00pm &nbsp;|&nbsp; Mon &amp; Sun Closed</p>
+						<p>Mon–Fri 8:30am–4:00pm &nbsp;|&nbsp; Sat 9:00am–12:00pm &nbsp;|&nbsp; Sun Closed</p>
 						<div class="contact-store-card__actions">
 							<a class="btn btn--primary contact-store-card__btn" href="<?php echo esc_attr( coffsope_phone_link('coffs') ); ?>">Call now</a>
 							<a class="btn btn--outline contact-store-card__btn" href="https://maps.app.goo.gl/2i7si1rnu49NJaXr9" target="_blank" rel="noopener noreferrer">Get directions</a>

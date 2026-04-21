@@ -40,12 +40,8 @@ $store_image  = get_theme_mod( 'loc_coffs_store_image', get_template_directory_u
 								<dd class="info-row__value"><a href="mailto:<?php echo esc_attr( coffsope_email() ); ?>" style="color:var(--color-orange);"><?php echo esc_html( coffsope_email() ); ?></a></dd>
 							</div>
 							<div class="info-row">
-								<dt class="info-row__label">Monday</dt>
-								<dd class="info-row__value">Closed</dd>
-							</div>
-							<div class="info-row">
-								<dt class="info-row__label">Tue–Fri</dt>
-								<dd class="info-row__value">8:30am–4:30pm</dd>
+								<dt class="info-row__label">Mon–Fri</dt>
+								<dd class="info-row__value">8:30am–4:00pm</dd>
 							</div>
 							<div class="info-row">
 								<dt class="info-row__label">Saturday</dt>

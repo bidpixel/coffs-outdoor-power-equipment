@@ -57,6 +57,7 @@
 							<li><a href="<?php echo esc_url( home_url( '/pressure-cleaners' ) ); ?>">Pressure cleaners</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/water-pumps' ) ); ?>">Water pumps</a></li>
 								<li><a href="<?php echo esc_url( home_url( '/battery-electric' ) ); ?>">Battery &amp; electric</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/compact-tractors' ) ); ?>">Compact tractors</a></li>
 						</ul>
 					</li>
 
@@ -72,6 +73,7 @@
 							<li><a href="<?php echo esc_url( home_url( '/brands#greenfield' ) ); ?>">Greenfield</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/brands#spika' ) ); ?>">Spika</a></li>
 							<li><a href="<?php echo esc_url( home_url( '/brands#wright' ) ); ?>">Wright</a></li>
+							<li><a href="<?php echo esc_url( home_url( '/brands#tym' ) ); ?>">TYM Tractors</a></li>
 						</ul>
 					</li>
 
@@ -157,6 +159,7 @@
 				<a href="<?php echo esc_url( home_url( '/pressure-cleaners' ) ); ?>">Pressure cleaners</a>
 				<a href="<?php echo esc_url( home_url( '/water-pumps' ) ); ?>">Water pumps</a>
 				<a href="<?php echo esc_url( home_url( '/battery-electric' ) ); ?>">Battery &amp; electric</a>
+				<a href="<?php echo esc_url( home_url( '/compact-tractors' ) ); ?>">Compact tractors</a>
 			</div>
 		</li>
 
@@ -172,6 +175,7 @@
 				<a href="<?php echo esc_url( home_url( '/brands#greenfield' ) ); ?>">Greenfield</a>
 				<a href="<?php echo esc_url( home_url( '/brands#spika' ) ); ?>">Spika</a>
 				<a href="<?php echo esc_url( home_url( '/brands#wright' ) ); ?>">Wright</a>
+				<a href="<?php echo esc_url( home_url( '/brands#tym' ) ); ?>">TYM Tractors</a>
 			</div>
 		</li>
 

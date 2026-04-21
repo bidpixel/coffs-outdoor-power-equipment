@@ -776,8 +776,12 @@ body.nav-open { overflow: hidden; }
 
 .products__grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
+}
+
+@media (max-width: 900px) {
+	.products__grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 .product-card {
@@ -1049,6 +1053,85 @@ body.nav-open { overflow: hidden; }
 /* =========================================================
    Footer CTA
    ========================================================= */
+/* =========================================================
+   Payment options
+   ========================================================= */
+
+.payment-options {
+	background-color: var(--color-white);
+}
+
+.payment-options .section-heading {
+	color: var(--color-black);
+}
+
+.payment-options .section-intro {
+	color: var(--color-charcoal);
+}
+
+.payment-options__inline-link {
+	color: var(--color-orange);
+	text-decoration: underline;
+}
+
+.payment-options__items {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	gap: 3rem;
+	align-items: start;
+	margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.payment-options__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.payment-options__logo-wrap {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.payment-options__logo {
+	max-height: 80px;
+	max-width: 260px;
+	width: auto;
+	object-fit: contain;
+}
+
+.payment-options__logo--invert {
+	filter: none;
+}
+
+.payment-options__item h3 {
+	font-size: 1.25rem;
+	color: var(--color-black);
+	margin-bottom: 0.625rem;
+}
+
+.payment-options__item p {
+	font-size: 0.9375rem;
+	color: var(--color-charcoal);
+	margin-bottom: 1.5rem;
+	max-width: 42ch;
+	text-align: center;
+}
+
+.payment-options__divider {
+	width: 1px;
+	background-color: #e5e2dc;
+	align-self: stretch;
+}
+
+@media (max-width: 768px) {
+	.payment-options__items { grid-template-columns: 1fr; gap: 2.5rem; }
+	.payment-options__divider { width: auto; height: 1px; }
+}
+
 .footer-cta {
 	background-color: var(--color-orange);
 	padding-block: clamp(3rem, 6vw, 5rem);
