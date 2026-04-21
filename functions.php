@@ -27,14 +27,14 @@ function coffsope_enqueue_assets() {
 		'coffsope-main',
 		COFFSOPE_URI . '/assets/css/main.css',
 		[],
-		COFFSOPE_VERSION
+		filemtime( COFFSOPE_DIR . '/assets/css/main.css' )
 	);
 
 	wp_enqueue_script(
 		'coffsope-main',
 		COFFSOPE_URI . '/assets/js/main.js',
 		[],
-		COFFSOPE_VERSION,
+		filemtime( COFFSOPE_DIR . '/assets/js/main.js' ),
 		true
 	);
 
