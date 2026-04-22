@@ -96,10 +96,11 @@ foreach ( $services as $i => $svc ) :
 						<h3>Urunga Chainsaw &amp; Mower</h3>
 						<p>Lot 1/2 Marina Crescent, Urunga NSW 2455</p>
 						<p>Phone: <a href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>"><?php echo esc_html( coffsope_phone('urunga') ); ?></a></p>
+						<p>Email: <a href="mailto:enquiries@urungachainsawandmower.com.au">enquiries@urungachainsawandmower.com.au</a></p>
 						<p>Mon–Fri 8:30am–5:00pm</p>
 						<div class="contact-store-card__actions">
 							<a class="btn btn--primary contact-store-card__btn" href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>">Call now</a>
-							<a class="btn btn--outline contact-store-card__btn" href="https://maps.app.goo.gl/HjYxUSK3DPKGZTcf7" target="_blank" rel="noopener noreferrer">Get directions</a>
+							<a class="btn btn--outline contact-store-card__btn" href="https://www.google.com/maps/dir/?api=1&destination=Lot+1%2F2+Marina+Crescent,+Urunga+NSW+2455" target="_blank" rel="noopener noreferrer">Get directions</a>
 						</div>
 					</div>
 				</div>
@@ -117,10 +118,11 @@ foreach ( $services as $i => $svc ) :
 						<h3>Coffs Harbour Outdoor Power Equipment</h3>
 						<p>16 Wakelands Road, Sapphire Beach NSW 2450</p>
 						<p>Phone: <a href="<?php echo esc_attr( coffsope_phone_link('coffs') ); ?>"><?php echo esc_html( coffsope_phone('coffs') ); ?></a></p>
-						<p>Tue–Fri 8:30am–4:30pm &nbsp;|&nbsp; Sat 9:00am–12:00pm</p>
+						<p>Email: <a href="mailto:<?php echo esc_attr( coffsope_email() ); ?>"><?php echo esc_html( coffsope_email() ); ?></a></p>
+						<p>Mon–Fri 8:30am–4:00pm &nbsp;|&nbsp; Sat 9:00am–12:00pm</p>
 						<div class="contact-store-card__actions">
 							<a class="btn btn--primary contact-store-card__btn" href="<?php echo esc_attr( coffsope_phone_link('coffs') ); ?>">Call now</a>
-							<a class="btn btn--outline contact-store-card__btn" href="https://maps.app.goo.gl/2i7si1rnu49NJaXr9" target="_blank" rel="noopener noreferrer">Get directions</a>
+							<a class="btn btn--outline contact-store-card__btn" href="https://www.google.com/maps/dir/?api=1&destination=16+Wakelands+Road,+Sapphire+Beach+NSW+2450" target="_blank" rel="noopener noreferrer">Get directions</a>
 						</div>
 					</div>
 				</div>

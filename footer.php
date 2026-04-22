@@ -37,7 +37,7 @@
 						<span>Mon–Fri: 8:30am–5:00pm</span>
 						<span>Sat–Sun: Closed</span>
 					</div>
-					<a href="https://maps.app.goo.gl/HjYxUSK3DPKGZTcf7" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.875rem;padding:0.6rem 1.25rem;">Get directions</a>
+					<a href="https://www.google.com/maps/dir/?api=1&destination=Lot+1%2F2+Marina+Crescent,+Urunga+NSW+2455" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.875rem;padding:0.6rem 1.25rem;">Get directions</a>
 				</div>
 
 				<div class="site-footer__col">
@@ -50,7 +50,7 @@
 						<span>Sat: 9:00am–12:00pm</span>
 						<span>Sun: Closed</span>
 					</div>
-					<a href="https://maps.app.goo.gl/2i7si1rnu49NJaXr9" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.875rem;padding:0.6rem 1.25rem;">Get directions</a>
+					<a href="https://www.google.com/maps/dir/?api=1&destination=16+Wakelands+Road,+Sapphire+Beach+NSW+2450" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="font-size:0.875rem;padding:0.6rem 1.25rem;">Get directions</a>
 				</div>
 
 				<div class="site-footer__col">

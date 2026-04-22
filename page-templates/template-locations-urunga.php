@@ -54,7 +54,7 @@ $store_image  = get_theme_mod( 'loc_urunga_store_image', get_template_directory_
 						</dl>
 						<div class="map-embed" style="margin-bottom:1.25rem;">
 							<iframe
-								src="https://maps.google.com/maps?q=Urunga+Chainsaw+%26+Mower&output=embed"
+								src="https://maps.google.com/maps?q=Lot+1%2F2+Marina+Crescent,+Urunga+NSW+2455&output=embed"
 								width="100%"
 								height="100%"
 								style="border:0;"
@@ -65,7 +65,7 @@ $store_image  = get_theme_mod( 'loc_urunga_store_image', get_template_directory_
 							></iframe>
 						</div>
 						<div class="location-cta">
-							<a class="btn btn--primary" href="https://maps.app.goo.gl/HjYxUSK3DPKGZTcf7" target="_blank" rel="noopener noreferrer">Get directions</a>
+							<a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&destination=Lot+1%2F2+Marina+Crescent,+Urunga+NSW+2455" target="_blank" rel="noopener noreferrer">Get directions</a>
 							<a class="btn btn--outline" href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>">Call us</a>
 							<a class="store-social-link" href="<?php echo esc_url( coffsope_facebook('urunga') ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Facebook: Urunga Chainsaw &amp; Mower">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>

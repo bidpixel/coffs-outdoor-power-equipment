@@ -36,7 +36,7 @@ get_header();
 						<p>Mon–Fri 8:30am–5:00pm &nbsp;|&nbsp; Sat–Sun Closed</p>
 						<div class="contact-store-card__actions">
 							<a class="btn btn--primary contact-store-card__btn" href="<?php echo esc_attr( coffsope_phone_link('urunga') ); ?>">Call now</a>
-							<a class="btn btn--outline contact-store-card__btn" href="https://maps.app.goo.gl/HjYxUSK3DPKGZTcf7" target="_blank" rel="noopener noreferrer">Get directions</a>
+							<a class="btn btn--outline contact-store-card__btn" href="https://www.google.com/maps/dir/?api=1&destination=Lot+1%2F2+Marina+Crescent,+Urunga+NSW+2455" target="_blank" rel="noopener noreferrer">Get directions</a>
 							<a class="store-social-link" href="<?php echo esc_url( coffsope_facebook('urunga') ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Facebook: Urunga Chainsaw &amp; Mower">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
 							</a>
@@ -61,7 +61,7 @@ get_header();
 						<p>Mon–Fri 8:30am–4:00pm &nbsp;|&nbsp; Sat 9:00am–12:00pm &nbsp;|&nbsp; Sun Closed</p>
 						<div class="contact-store-card__actions">
 							<a class="btn btn--primary contact-store-card__btn" href="<?php echo esc_attr( coffsope_phone_link('coffs') ); ?>">Call now</a>
-							<a class="btn btn--outline contact-store-card__btn" href="https://maps.app.goo.gl/2i7si1rnu49NJaXr9" target="_blank" rel="noopener noreferrer">Get directions</a>
+							<a class="btn btn--outline contact-store-card__btn" href="https://www.google.com/maps/dir/?api=1&destination=16+Wakelands+Road,+Sapphire+Beach+NSW+2450" target="_blank" rel="noopener noreferrer">Get directions</a>
 							<a class="store-social-link" href="<?php echo esc_url( coffsope_facebook('coffs') ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Facebook: Coffs Harbour Outdoor Power Equipment">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
 							</a>
