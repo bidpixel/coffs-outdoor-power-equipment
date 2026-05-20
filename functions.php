@@ -432,3 +432,146 @@ function coffsope_facebook( $store ) {
 	];
 	return get_theme_mod( "coffsope_facebook_{$store}", $defaults[ $store ] ?? '' );
 }
+
+// ---------------------------------------------------------------------------
+// Admin login page branding (Nooma Logic)
+// ---------------------------------------------------------------------------
+
+function coffsope_login_styles() {
+	$logo = COFFSOPE_URI . '/assets/images/login-logo.webp';
+	?>
+	<style>
+		body.login {
+			background: #FAF9F3;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		}
+		body.login div#login h1 a {
+			background-image: url('<?php echo esc_url( $logo ); ?>') !important;
+			background-size: contain !important;
+			background-repeat: no-repeat !important;
+			background-position: center !important;
+			width: 320px !important;
+			height: 90px !important;
+			margin: 0 auto 16px !important;
+			padding-bottom: 0 !important;
+		}
+		.login form {
+			background: #ffffff;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			border-radius: 12px;
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+			padding: 28px 24px 24px;
+		}
+		.login form .input,
+		.login input[type="text"],
+		.login input[type="password"] {
+			border-radius: 8px;
+			border: 1px solid #e5e7eb;
+			background: #FAF9F3;
+			color: #1f2937;
+		}
+		.login form .input:focus,
+		.login input[type="text"]:focus,
+		.login input[type="password"]:focus {
+			border-color: #ff9966;
+			box-shadow: 0 0 0 2px rgba(255, 153, 102, 0.25);
+			outline: none;
+		}
+		.login label,
+		.login .forgetmenot label {
+			color: #1f2937;
+		}
+		.wp-core-ui .button-primary {
+			background: #ff9966;
+			border-color: #ff9966;
+			color: #1f2937;
+			text-shadow: none;
+			box-shadow: none;
+			border-radius: 8px;
+			font-weight: 600;
+		}
+		.wp-core-ui .button-primary:hover,
+		.wp-core-ui .button-primary:focus {
+			background: #FFAA80;
+			border-color: #FFAA80;
+			color: #1f2937;
+		}
+		.login #nav a,
+		.login #backtoblog a {
+			color: #1f2937;
+		}
+		.login #nav a:hover,
+		.login #backtoblog a:hover {
+			color: #ff9966;
+		}
+		.login .privacy-policy-page-link a {
+			color: #1f2937;
+		}
+		.login .coffsope-login-blurb {
+			text-align: center;
+			color: #1f2937;
+			max-width: 320px;
+			margin: 0 auto 20px;
+			font-size: 14px;
+			line-height: 1.5;
+		}
+		.login .coffsope-login-blurb strong {
+			display: block;
+			font-size: 18px;
+			font-weight: 600;
+			margin-bottom: 6px;
+			color: #1f2937;
+		}
+		.login .coffsope-login-footer {
+			text-align: center;
+			margin-top: 24px;
+			padding: 16px 20px;
+			max-width: 320px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 12px;
+			color: #1f2937;
+			opacity: 0.7;
+			line-height: 1.5;
+		}
+		.login .coffsope-login-footer a {
+			color: #ff9966;
+			text-decoration: none;
+			font-weight: 600;
+		}
+		.login .coffsope-login-footer a:hover {
+			text-decoration: underline;
+		}
+	</style>
+	<?php
+}
+add_action( 'login_enqueue_scripts', 'coffsope_login_styles' );
+
+function coffsope_login_message( $message ) {
+	if ( ! empty( $message ) ) {
+		return $message;
+	}
+	return '<div class="coffsope-login-blurb">'
+		. '<strong>Welcome back</strong>'
+		. 'Sign in to manage the Coffs Coast Outdoor Power Equipment website.'
+		. '</div>';
+}
+add_filter( 'login_message', 'coffsope_login_message' );
+
+function coffsope_login_footer() {
+	echo '<div class="coffsope-login-footer">'
+		. 'Need a hand? Email <a href="mailto:hello@noomalogic.com">hello@noomalogic.com</a><br>'
+		. 'Built with care by <a href="https://noomalogic.com" target="_blank" rel="noopener">Nooma Logic</a>'
+		. '</div>';
+}
+add_action( 'login_footer', 'coffsope_login_footer' );
+
+function coffsope_login_logo_url() {
+	return 'https://noomalogic.com';
+}
+add_filter( 'login_headerurl', 'coffsope_login_logo_url' );
+
+function coffsope_login_logo_text() {
+	return 'Nooma Logic';
+}
+add_filter( 'login_headertext', 'coffsope_login_logo_text' );
