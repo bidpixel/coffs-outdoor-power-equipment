@@ -157,6 +157,65 @@ function coffsope_customize_register( $wp_customize ) {
 		] );
 	};
 
+	$cb = function ( $id, $sec, $label, $default = true ) use ( $wp_customize ) {
+		$wp_customize->add_setting( $id, [
+			'default'           => $default,
+			'sanitize_callback' => 'rest_sanitize_boolean',
+		] );
+		$wp_customize->add_control( $id, [
+			'label'   => $label,
+			'section' => $sec,
+			'type'    => 'checkbox',
+		] );
+	};
+
+	// =========================================================================
+	// SECTION: Current Deals (top-level — appears at the top of the Customizer)
+	// =========================================================================
+	$wp_customize->add_section( 'coffsope_hp_deals', [
+		'title'    => 'Current Deals',
+		'priority' => 10,
+	] );
+
+	$cb( 'hp_deals_enabled', 'coffsope_hp_deals', 'Show Current Deals section on homepage', true );
+
+	$deal_defaults = [
+		1 => [
+			'image' => $u . '/products/stihl-chainsaw-coffs-coast-1.jpg',
+			'title' => 'STIHL MS 180 chainsaw',
+			'blurb' => 'Save on the chainsaw that does the hard yards. In store now.',
+		],
+		2 => [
+			'image' => $u . '/products/honda-hru216-self-propelled-mower-coffs-coast.jpg',
+			'title' => 'Honda HRU216 mower',
+			'blurb' => 'The Aussie-favourite self-propelled mower. Genuine Honda quality.',
+		],
+		3 => [
+			'image' => $u . '/products/ride-on-mower-lifestyle.jpg',
+			'title' => 'COX ride-on package',
+			'blurb' => "Ride-on plus a workshop service voucher. While they're available.",
+		],
+		4 => [
+			'image' => $u . '/products/kress-kr173e-robot-mower.webp',
+			'title' => 'Kress robot mower',
+			'blurb' => 'Set and forget. Battery-powered, GPS-guided, install included.',
+		],
+	];
+
+	for ( $i = 1; $i <= 4; $i++ ) {
+		$cb(  "hp_deal_{$i}_enabled", 'coffsope_hp_deals', "Deal {$i} — show this slide", true );
+		$img( "hp_deal_{$i}_image",   'coffsope_hp_deals', "Deal {$i} — image", $deal_defaults[ $i ]['image'] );
+		$t(   "hp_deal_{$i}_title",   'coffsope_hp_deals', "Deal {$i} — title", $deal_defaults[ $i ]['title'] );
+		$t(   "hp_deal_{$i}_blurb",   'coffsope_hp_deals', "Deal {$i} — blurb", $deal_defaults[ $i ]['blurb'], 'textarea' );
+		$url( "hp_deal_{$i}_link",    'coffsope_hp_deals', "Deal {$i} — link (optional)" );
+	}
+
+	$img( 'hp_deals_bg_image', 'coffsope_hp_deals', 'Background image', $u . '/gallery/outdoor-power-equipment-store-coffs-coast-3.jpg' );
+	$t(   'hp_deals_label',    'coffsope_hp_deals', 'Section label', 'Hot right now' );
+	$t(   'hp_deals_heading',  'coffsope_hp_deals', 'Heading', 'Current deals.' );
+	$t(   'hp_deals_intro',    'coffsope_hp_deals', 'Intro text', 'Limited-time offers on the gear our customers ask for most. Come in store or call to grab one before they go.', 'textarea' );
+	$t(   'hp_deals_cta_heading', 'coffsope_hp_deals', 'CTA heading (call buttons)', 'Call now to secure your deal' );
+
 	// =========================================================================
 	// PANEL: Site Settings
 	// =========================================================================
@@ -423,6 +482,48 @@ function coffsope_phone_link( $store ) {
 
 function coffsope_email() {
 	return get_theme_mod( 'coffsope_coffs_email', 'sales@coffsope.com.au' );
+}
+
+/**
+ * Fetch recent Facebook posts via Graph API.
+ * Credentials must be defined in wp-config.php:
+ *   define( 'COFFSOPE_FB_PAGE_ID', '123456789012345' );
+ *   define( 'COFFSOPE_FB_TOKEN',   'EAA...' );  // long-lived Page Access Token
+ *
+ * Returns [] if not configured or if the API call fails.
+ * Caches results for 6 hours (transient).
+ */
+function coffsope_facebook_posts( $count = 5 ) {
+	$count = max( 1, min( 10, (int) $count ) );
+
+	if ( ! defined( 'COFFSOPE_FB_PAGE_ID' ) || ! defined( 'COFFSOPE_FB_TOKEN' ) ) {
+		return [];
+	}
+
+	$cache_key = 'coffsope_fb_posts_' . $count;
+	$cached    = get_transient( $cache_key );
+	if ( false !== $cached ) {
+		return $cached;
+	}
+
+	$url = add_query_arg( [
+		'fields'       => 'id,message,story,full_picture,created_time,permalink_url',
+		'limit'        => $count,
+		'access_token' => COFFSOPE_FB_TOKEN,
+	], 'https://graph.facebook.com/v19.0/' . rawurlencode( COFFSOPE_FB_PAGE_ID ) . '/posts' );
+
+	$response = wp_remote_get( $url, [ 'timeout' => 6 ] );
+
+	if ( is_wp_error( $response ) || wp_remote_retrieve_response_code( $response ) !== 200 ) {
+		set_transient( $cache_key, [], 15 * MINUTE_IN_SECONDS );
+		return [];
+	}
+
+	$body  = json_decode( wp_remote_retrieve_body( $response ), true );
+	$posts = isset( $body['data'] ) && is_array( $body['data'] ) ? $body['data'] : [];
+
+	set_transient( $cache_key, $posts, 6 * HOUR_IN_SECONDS );
+	return $posts;
 }
 
 function coffsope_facebook( $store ) {

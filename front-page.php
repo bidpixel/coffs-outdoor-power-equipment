@@ -4,9 +4,11 @@
 <?php get_template_part( 'template-parts/homepage/trust-bar' ); ?>
 <?php get_template_part( 'template-parts/homepage/stores' ); ?>
 <?php get_template_part( 'template-parts/homepage/products' ); ?>
+<?php get_template_part( 'template-parts/homepage/deals' ); ?>
 <?php get_template_part( 'template-parts/homepage/brands' ); ?>
 <?php get_template_part( 'template-parts/homepage/servicing' ); ?>
 <?php get_template_part( 'template-parts/homepage/reviews' ); ?>
+<?php get_template_part( 'template-parts/homepage/facebook' ); ?>
 <?php get_template_part( 'template-parts/homepage/payment-options' ); ?>
 <?php get_template_part( 'template-parts/homepage/footer-cta' ); ?>
 

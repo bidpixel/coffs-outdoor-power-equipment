@@ -268,6 +268,87 @@
 		startAuto();
 	}());
 
+	// ── Deals carousel ─────────────────────────────────────
+	(function () {
+		var wrap = document.querySelector('.deals__carousel');
+		if (!wrap) return;
+
+		var track    = wrap.querySelector('.deals__track');
+		var cards    = Array.from(track.querySelectorAll('.deal-card'));
+		if (!cards.length) return;
+		var prevBtn  = wrap.querySelector('.deals__btn--prev');
+		var nextBtn  = wrap.querySelector('.deals__btn--next');
+		var dotsWrap = document.querySelector('.deals__dots');
+		var current  = 0;
+		var autoTimer;
+		var AUTO_INTERVAL = 4500;
+
+		function slidesVisible() {
+			return window.innerWidth >= 1024 ? 2 : 1;
+		}
+
+		function maxIndex() {
+			return Math.max(0, cards.length - slidesVisible());
+		}
+
+		function goTo(n) {
+			current = Math.max(0, Math.min(n, maxIndex()));
+			track.style.transform = 'translateX(-' + cards[current].offsetLeft + 'px)';
+			prevBtn.disabled = current === 0;
+			nextBtn.disabled = current === maxIndex();
+			dotsWrap.querySelectorAll('.deals__dot').forEach(function (d, i) {
+				d.classList.toggle('is-active', i === current);
+				d.setAttribute('aria-selected', String(i === current));
+			});
+		}
+
+		function buildDots() {
+			dotsWrap.innerHTML = '';
+			var positions = maxIndex() + 1;
+			for (var i = 0; i < positions; i++) {
+				(function (idx) {
+					var dot = document.createElement('button');
+					dot.className = 'deals__dot';
+					dot.setAttribute('role', 'tab');
+					dot.setAttribute('aria-label', 'Go to deal ' + (idx + 1));
+					dot.addEventListener('click', function () { goTo(idx); resetAuto(); });
+					dotsWrap.appendChild(dot);
+				}(i));
+			}
+		}
+
+		function startAuto() {
+			clearInterval(autoTimer);
+			if (maxIndex() === 0) return;
+			autoTimer = setInterval(function () {
+				goTo(current >= maxIndex() ? 0 : current + 1);
+			}, AUTO_INTERVAL);
+		}
+		function resetAuto() { startAuto(); }
+
+		prevBtn.addEventListener('click', function () { goTo(current - 1); resetAuto(); });
+		nextBtn.addEventListener('click', function () { goTo(current + 1); resetAuto(); });
+
+		wrap.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
+		wrap.addEventListener('mouseleave', startAuto);
+		wrap.addEventListener('focusin',    function () { clearInterval(autoTimer); });
+		wrap.addEventListener('focusout',   startAuto);
+
+		var resizeTimer;
+		window.addEventListener('resize', function () {
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(function () {
+				buildDots();
+				goTo(Math.min(current, maxIndex()));
+				startAuto();
+			}, 200);
+		});
+
+		buildDots();
+		goTo(0);
+		startAuto();
+	}());
+
 	// ── Scroll-to-top ─────────────────────────────────────
 	const scrollTopBtn = document.querySelector('.scroll-top');
 	if (scrollTopBtn) {

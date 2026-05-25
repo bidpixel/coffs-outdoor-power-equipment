@@ -2231,3 +2231,366 @@ body.page-template-template-brands {
 		grid-column: span 2;
 	}
 }
+
+/* =========================================================
+   Current Deals section
+   ========================================================= */
+.deals {
+	background-color: var(--color-black);
+	background-image: var(--deals-bg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+}
+.deals::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(circle at 12% 0%, rgba(224, 123, 42, 0.18), transparent 45%),
+		radial-gradient(circle at 88% 100%, rgba(224, 123, 42, 0.14), transparent 45%),
+		rgba(20, 20, 20, 0.82);
+	pointer-events: none;
+}
+.deals .container { position: relative; z-index: 1; }
+
+.deals__carousel {
+	position: relative;
+	overflow: hidden;
+}
+
+.deals__track {
+	display: flex;
+	gap: 1.5rem;
+	transition: transform 0.45s ease;
+	will-change: transform;
+}
+
+/* 2 visible on desktop — landscape card with portrait image left */
+.deal-card {
+	flex: 0 0 calc(50% - 0.75rem);
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	min-height: 360px;
+	background-color: var(--color-off-white);
+	color: var(--color-black);
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+	transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+	isolation: isolate;
+}
+a.deal-card { text-decoration: none; }
+.deal-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 26px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(224, 123, 42, 0.5);
+	border-color: rgba(224, 123, 42, 0.55);
+}
+
+/* 1 visible on tablet & below — stays horizontal */
+@media (max-width: 1023px) {
+	.deal-card {
+		flex: 0 0 100%;
+		min-height: 320px;
+	}
+}
+
+/* Stack on narrow mobile for breathing room */
+@media (max-width: 559px) {
+	.deal-card {
+		flex-direction: column;
+		min-height: 0;
+	}
+}
+
+.deal-card__badge {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	display: inline-block;
+	background: var(--color-orange);
+	color: var(--color-white);
+	font-family: var(--font-heading);
+	font-weight: 700;
+	font-size: 0.8125rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	padding: 0.4rem 0.85rem;
+	border-radius: 3px;
+	z-index: 2;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+.deal-card__image {
+	flex: 0 0 42%;
+	aspect-ratio: 3 / 4;
+	overflow: hidden;
+	background-color: #0e0e0e;
+	position: relative;
+}
+.deal-card__image::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(90deg, transparent 75%, rgba(245, 240, 232, 0.55));
+	pointer-events: none;
+}
+.deal-card__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.4s ease;
+}
+.deal-card:hover .deal-card__image img { transform: scale(1.05); }
+
+@media (max-width: 559px) {
+	.deal-card__image {
+		flex: 0 0 auto;
+		aspect-ratio: 4 / 3;
+	}
+	.deal-card__image::after {
+		background: linear-gradient(180deg, transparent 70%, rgba(245, 240, 232, 0.55));
+	}
+}
+
+.deal-card__body {
+	padding: 2rem 2rem 2rem 1.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.85rem;
+	flex: 1;
+	justify-content: center;
+}
+
+@media (max-width: 559px) {
+	.deal-card__body { padding: 1.5rem 1.5rem 1.75rem; }
+}
+
+.deal-card__title {
+	font-size: clamp(1.375rem, 2vw, 1.75rem);
+	color: var(--color-black);
+	line-height: 1.1;
+}
+
+.deal-card__blurb {
+	color: var(--color-charcoal);
+	font-size: 1rem;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.deal-card__cta {
+	margin-top: auto;
+	padding-top: 0.5rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: var(--color-orange);
+	font-weight: 700;
+	font-size: 0.9375rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.deal-card:hover .deal-card__cta svg { transform: translateX(4px); }
+.deal-card__cta svg { transition: transform 0.2s ease; }
+
+/* Prev / next buttons */
+.deals__btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: var(--color-orange);
+	color: var(--color-white);
+	border: none;
+	border-radius: 50%;
+	width: 2.5rem;
+	height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background-color 0.2s ease, opacity 0.2s ease;
+	z-index: 2;
+}
+.deals__btn:hover { background-color: #c45a00; }
+.deals__btn:disabled { opacity: 0.3; cursor: default; }
+.deals__btn--prev { left: -0.25rem; }
+.deals__btn--next { right: -0.25rem; }
+
+@media (min-width: 640px) {
+	.deals__carousel { padding-inline: 2.75rem; }
+	.deals__btn--prev { left: 0; }
+	.deals__btn--next { right: 0; }
+}
+
+/* Dots */
+.deals__dots {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-top: 1.75rem;
+}
+
+.deals__dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.25);
+	cursor: pointer;
+	padding: 0;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+	position: relative;
+}
+.deals__dot::before {
+	content: '';
+	position: absolute;
+	inset: -8px;
+}
+.deals__dot.is-active {
+	background-color: var(--color-orange);
+	transform: scale(1.3);
+}
+
+/* CTA — call buttons */
+.deals__cta {
+	margin-top: clamp(2.5rem, 5vw, 3.5rem);
+	text-align: center;
+}
+.deals__cta-heading {
+	font-size: clamp(1.5rem, 3vw, 2rem);
+	color: var(--color-white);
+	margin-bottom: 1.25rem;
+}
+.deals__cta-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+.deals__cta-btn {
+	padding: 1rem 1.5rem;
+	min-width: 240px;
+	justify-content: center;
+	text-align: left;
+}
+.deals__cta-btn span { display: inline-block; line-height: 1.2; }
+.deals__cta-store {
+	display: block;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	opacity: 0.85;
+	margin-bottom: 0.15rem;
+}
+.deals__cta-num {
+	font-family: var(--font-heading);
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+@media (max-width: 559px) {
+	.deals__cta-buttons { flex-direction: column; align-items: stretch; }
+	.deals__cta-btn { width: 100%; min-width: 0; }
+}
+
+/* =========================================================
+   Facebook feed section
+   ========================================================= */
+.facebook-feed {
+	background-color: var(--color-charcoal);
+}
+.facebook-feed .section-header { margin-bottom: 2.5rem; }
+
+.facebook-feed__row {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1.25rem;
+}
+@media (max-width: 1099px) {
+	.facebook-feed__row { grid-template-columns: repeat(3, 1fr); }
+	.facebook-feed__row > :nth-child(n+4) { display: none; }
+}
+@media (max-width: 767px) {
+	.facebook-feed__row { grid-template-columns: repeat(2, 1fr); }
+	.facebook-feed__row > :nth-child(n+3) { display: none; }
+}
+@media (max-width: 479px) {
+	.facebook-feed__row { grid-template-columns: 1fr; }
+	.facebook-feed__row > :nth-child(n+2) { display: none; }
+}
+
+.fb-post {
+	display: flex;
+	flex-direction: column;
+	background: var(--color-off-white);
+	color: var(--color-black);
+	border-radius: 8px;
+	overflow: hidden;
+	text-decoration: none;
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.fb-post:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.fb-post__image {
+	aspect-ratio: 4 / 3;
+	overflow: hidden;
+	background: #1f1f1f;
+}
+.fb-post__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.35s ease;
+}
+.fb-post:hover .fb-post__image img { transform: scale(1.04); }
+
+.fb-post__body {
+	padding: 1rem 1.1rem 1.2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	flex: 1;
+}
+
+.fb-post__date {
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--color-orange);
+}
+
+.fb-post__text {
+	color: var(--color-charcoal);
+	font-size: 0.875rem;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.fb-post__more {
+	margin-top: auto;
+	padding-top: 0.4rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	color: var(--color-orange);
+	font-weight: 700;
+	font-size: 0.8125rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+.facebook-feed__cta {
+	margin-top: 2.5rem;
+	display: flex;
+	justify-content: center;
+}
